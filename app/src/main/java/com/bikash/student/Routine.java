@@ -20,5 +20,6 @@ public class Routine extends AppCompatActivity {
         TextView t1_4 = (TextView)findViewById(R.id.day1_4);
         t1_4.setText("Data Structure");
 
+
     }
 }

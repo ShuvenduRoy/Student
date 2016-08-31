@@ -15,7 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Routine"></activity>
+
+        <activity
+            android:name=".Routine"
+            android:screenOrientation="landscape">
+            //making the routing landscape mode
+        </activity>
+
+        <activity android:name=".Presentance"></activity>
     </application>
 
 </manifest>

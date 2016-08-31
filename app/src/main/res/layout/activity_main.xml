@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background"
     tools:context="com.bikash.student.MainActivity">
 
     <TextView
@@ -17,11 +18,26 @@
         android:background="@color/category_phrases"
         android:textAlignment="center"
         android:textColor="@color/Black"
-        android:textSize="28dp"
+        android:textSize="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:text="Presentance Count"
+        android:padding="7dp"
+        android:id="@+id/presentance"
+        android:background="@color/category_phrases"
+        android:textAlignment="center"
+        android:textColor="@color/Black"
+        android:textSize="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
     <TextView
         android:text="UpComing Event"
@@ -29,19 +45,7 @@
         android:background="@color/category_phrases"
         android:textAlignment="center"
         android:textColor="@color/Black"
-        android:textSize="28dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:text="Presentance Count"
-        android:padding="7dp"
-        android:background="@color/category_phrases"
-        android:textAlignment="center"
-        android:textColor="@color/Black"
-        android:textSize="28dp"
+        android:textSize="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:layout_width="match_parent"
@@ -53,7 +57,7 @@
         android:background="@color/category_phrases"
         android:textAlignment="center"
         android:textColor="@color/Black"
-        android:textSize="28dp"
+        android:textSize="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:layout_width="match_parent"
@@ -65,7 +69,7 @@
         android:background="@color/category_phrases"
         android:textAlignment="center"
         android:textColor="@color/Black"
-        android:textSize="28dp"
+        android:textSize="20dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:layout_width="match_parent"

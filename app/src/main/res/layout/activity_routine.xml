@@ -1,12 +1,408 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bikash.student.Routine">
 
-</RelativeLayout>
+
+    <!--Class time -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Day"
+            android:background="@color/Purple"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="8.00 - 8.50"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="8.50 - 9.40"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="9.40 - 10.30"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="10.40 - 11.30"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="11.30 - 12.40"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="12.40 - 1.10"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="2.30-5.00"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <!--Sunday class routine -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/day1.0"
+            android:textAlignment="center"
+            android:background="@color/Purple"
+            android:text="Sunday"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/day1_1"
+            android:textAlignment="center"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/day1_2"
+            android:textAlignment="center"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/day1_3"
+            android:textAlignment="center"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/day1_4"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="OOP"
+            android:id="@+id/day1_5"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="EEE"
+            android:textAlignment="center"
+            android:id="@+id/day1_6"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Data Structure lab"
+            android:textAlignment="center"
+            android:id="@+id/day1_7"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <!--Monday -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="MonDayDay"
+            android:background="@color/Purple"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Digital Electronic Lab"
+            android:textAlignment="center"
+            android:layout_weight="3"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+<!--
+        <TextView
+            android:text="8.50 - 9.40"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="9.40 - 10.30"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        -->
+
+        <TextView
+            android:textAlignment="center"
+            android:text="Data Structure"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:text="Computer archi"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:text="OOP"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:textAlignment="center"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!--TuesDay -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="TuesDay"
+            android:background="@color/Purple"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:textAlignment="center"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text=""
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Computer Archi"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:text="Math"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Data Structure"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="EEE"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=""
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=""
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="WednesDay"
+            android:background="@color/Purple"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text=""
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:textAlignment="center"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Computer Archi"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="OOP"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Math"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=""
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text=""
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="ThursDay"
+            android:background="@color/Purple"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Math"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="EEE"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textAlignment="center"
+            android:text="OOP Lab"
+            android:layout_weight="2"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+        <!--
+        <TextView
+            android:textAlignment="center"
+            android:text="11.30 - 12.40"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textAlignment="center"
+            android:text="12.40 - 1.10"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+            -->
+        <TextView
+            android:textAlignment="center"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

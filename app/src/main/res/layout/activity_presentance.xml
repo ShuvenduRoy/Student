@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/rain"
+    android:background="@drawable/wallblue"
     tools:context=".Presentance">
 
     <LinearLayout
@@ -23,6 +23,7 @@
             android:paddingRight="5dp"
             android:layout_width="0dp"
             android:layout_weight="3"
+            android:textColor="@android:color/white"
             android:layout_height="wrap_content" />
 
 
@@ -32,13 +33,14 @@
             android:layout_weight="1"
             android:layout_height="35dp"
             android:text="-"
-            android:id="@+id/absent" />
+            android:id="@+id/absent1" />
 
         <TextView
             android:id="@+id/t1p"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:textSize="16dp"
+            android:textColor="@android:color/white"
             android:text="0%"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -47,7 +49,7 @@
         <Button
             android:text="+"
             android:onClick="presentButton"
-            android:id="@+id/present"
+            android:id="@+id/present1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="35dp" />
@@ -56,6 +58,7 @@
             android:text="0/0"
             android:paddingRight="5dp"
             android:paddingLeft="30dp"
+            android:textColor="@android:color/white"
             android:layout_width="0dp"
             android:layout_weight="1.5"
             android:layout_height="wrap_content" />

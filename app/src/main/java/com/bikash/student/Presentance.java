@@ -30,8 +30,22 @@ public class Presentance extends AppCompatActivity {
         }
     }
 
+    public void presentButton0(View view){
+        PresentButton(view,0);
+    }
+
     public void presentButton1(View view){
         PresentButton(view,1);
+    }
+
+    public void presentButton2(View view){
+        PresentButton(view,2);
+    }
+    public void presentButton3(View view){
+        PresentButton(view,3);
+    }
+    public void presentButton4(View view){
+        PresentButton(view,4);
     }
 
 
@@ -52,9 +66,21 @@ public class Presentance extends AppCompatActivity {
     }
 
 
+    public void absentButton0(View view){
+        AbsentButton(view, 0);
+    }
 
     public void absentButton1(View view){
         AbsentButton(view, 1);
+    }
+    public void absentButton2(View view){
+        AbsentButton(view, 2);
+    }
+    public void absentButton3(View view){
+        AbsentButton(view, 3);
+    }
+    public void absentButton4(View view){
+        AbsentButton(view, 4);
     }
 
 
@@ -72,16 +98,35 @@ public class Presentance extends AppCompatActivity {
 
 
         //Getting textview for all ids bt its id
-        sub_name[1] = (TextView)findViewById(R.id.t1);  //Name of Teachar 1 or Subject 1
-        sub_percentage[1] = (TextView)findViewById(R.id.t1p); //Subject 1 Percentage count for Subject 1
-        sub_count[1] = (TextView)findViewById(R.id.count_1); //View for 0/0 like presentation
+        sub_name[0] = (TextView)findViewById(R.id.t0);  //Name of Teachar 1 or Subject 1
+        sub_percentage[0] = (TextView)findViewById(R.id.t0p); //Subject 1 Percentage count for Subject 1
+        sub_count[0] = (TextView)findViewById(R.id.count_0); //View for 0/0 like presentation
+
+        sub_name[1] = (TextView)findViewById(R.id.t1);
+        sub_percentage[1] = (TextView)findViewById(R.id.t1p);
+        sub_count[1] = (TextView)findViewById(R.id.count_1);
+
+        sub_name[2] = (TextView)findViewById(R.id.t2);
+        sub_percentage[2] = (TextView)findViewById(R.id.t2p);
+        sub_count[2] = (TextView)findViewById(R.id.count_2);
+
+        sub_name[3] = (TextView)findViewById(R.id.t3);
+        sub_percentage[3] = (TextView)findViewById(R.id.t3p);
+        sub_count[3] = (TextView)findViewById(R.id.count_3);
+
+        sub_name[4] = (TextView)findViewById(R.id.t4);
+        sub_percentage[4] = (TextView)findViewById(R.id.t4p);
+        sub_count[4] = (TextView)findViewById(R.id.count_4);
+
 
 
 
         //Working with Subject 1
-        sub_name[1].setText(s[1].name);
-        sub_percentage[1].setText( "0%");
-        sub_percentage[1].setBackgroundColor(Color.parseColor("#379237"));
+        for(int i=0; i<n; i++){
+            sub_name[i].setText(s[i].name);
+            sub_percentage[i].setText( "0%");
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
+        }
 
 
 

@@ -12,9 +12,63 @@
     tools:context=".Presentance">
 
 
+    <!-- Subject 0 View-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/t0"
+            android:text="Subject 1"
+            android:textSize="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />
 
 
+        <Button
+            android:onClick="absentButton0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="-"
+            android:id="@+id/absent0" />
 
+        <TextView
+            android:id="@+id/t0p"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"
+            android:text="0%"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="+"
+            android:onClick="presentButton0"
+            android:id="@+id/present0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/count_0"
+            android:text="0/0"
+            android:paddingRight="5dp"
+            android:paddingLeft="30dp"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <!-- Subject 1 View-->
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -59,6 +113,189 @@
             android:layout_height="35dp" />
         <TextView
             android:id="@+id/count_1"
+            android:text="0/0"
+            android:paddingRight="5dp"
+            android:paddingLeft="30dp"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <!-- Subject 2 View-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/t2"
+            android:text="Subject 1"
+            android:textSize="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:onClick="absentButton2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="-"
+            android:id="@+id/absent2" />
+
+        <TextView
+            android:id="@+id/t2p"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"
+            android:text="0%"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="+"
+            android:onClick="presentButton2"
+            android:id="@+id/present2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/count_2"
+            android:text="0/0"
+            android:paddingRight="5dp"
+            android:paddingLeft="30dp"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <!-- Subject 3 View-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/t3"
+            android:text="Subject 1"
+            android:textSize="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:onClick="absentButton3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="-"
+            android:id="@+id/absent3" />
+
+        <TextView
+            android:id="@+id/t3p"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"
+            android:text="0%"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="+"
+            android:onClick="presentButton3"
+            android:id="@+id/present3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/count_3"
+            android:text="0/0"
+            android:paddingRight="5dp"
+            android:paddingLeft="30dp"
+            android:textColor="@android:color/white"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <!-- Subject 4 View-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/t4"
+            android:text="Subject 1"
+            android:textSize="15dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:onClick="absentButton4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="-"
+            android:id="@+id/absent4" />
+
+        <TextView
+            android:id="@+id/t4p"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"
+            android:text="0%"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="+"
+            android:onClick="presentButton4"
+            android:id="@+id/present4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp" />
+        <TextView
+            android:id="@+id/count_4"
             android:text="0/0"
             android:paddingRight="5dp"
             android:paddingLeft="30dp"

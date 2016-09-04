@@ -11,6 +11,10 @@
     android:background="@drawable/wallblue"
     tools:context=".Presentance">
 
+
+
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -28,7 +32,7 @@
 
 
         <Button
-            android:onClick="absentButton"
+            android:onClick="absentButton1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="35dp"
@@ -48,7 +52,7 @@
 
         <Button
             android:text="+"
-            android:onClick="presentButton"
+            android:onClick="presentButton1"
             android:id="@+id/present1"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -64,5 +68,9 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+
+
+
 
 </LinearLayout>

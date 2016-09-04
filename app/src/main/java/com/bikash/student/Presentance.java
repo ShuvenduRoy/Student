@@ -14,39 +14,48 @@ public class Presentance extends AppCompatActivity {
     public TextView[] sub_count = new TextView[5];
 
     //Adding functionality for the button "+" id = Present
-    public void presentButton(View view){
-        s[1].total_class++;
-        s[1].present_classs++;
+    public void PresentButton(View view, int i){
+        s[i].total_class++;
+        s[i].present_classs++;
 
-        int per = (s[1].present_classs*100)/ s[1].total_class;
-        sub_percentage[1].setText(Integer.toString(per) + "%");
-        sub_count[1].setText(s[1].present_classs+"/"+ s[1].total_class);
+        int per = (s[i].present_classs*100)/ s[i].total_class;
+        sub_percentage[i].setText(Integer.toString(per) + "%");
+        sub_count[i].setText(s[i].present_classs+"/"+ s[i].total_class);
 
 
         if(per>=60){
-            sub_percentage[1].setBackgroundColor(Color.parseColor("#379237"));
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
         } else {
-            sub_percentage[1].setBackgroundColor(Color.parseColor("#ff0000"));
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#ff0000"));
         }
+    }
+
+    public void presentButton1(View view){
+        PresentButton(view,1);
     }
 
 
     //Adding functionality for the button "-" id = Basent
-    public void absentButton(View view){
-        s[1].total_class++;
+    public void AbsentButton(View view, int i){
+        s[i].total_class++;
 
-        int per = (s[1].present_classs*100)/ s[1].total_class;
-        sub_percentage[1].setText(Integer.toString(per) + "%");
-        sub_count[1].setText(s[1].present_classs+"/"+ s[1].total_class);
+        int per = (s[i].present_classs*100)/ s[i].total_class;
+        sub_percentage[i].setText(Integer.toString(per) + "%");
+        sub_count[i].setText(s[i].present_classs+"/"+ s[i].total_class);
 
 
         if(per>60){
-            sub_percentage[1].setBackgroundColor(Color.parseColor("#379237"));
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
         } else {
-            sub_percentage[1].setBackgroundColor(Color.parseColor("#ff0000"));
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#ff0000"));
         }
     }
 
+
+
+    public void absentButton1(View view){
+        AbsentButton(view, 1);
+    }
 
 
     @Override

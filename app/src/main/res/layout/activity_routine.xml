@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/skyBlue"
     tools:context="com.bikash.student.Routine">
 
 
@@ -16,11 +17,11 @@
         android:orientation="horizontal"
         android:padding="5dp"
         android:layout_width="match_parent"
+        android:background="@color/green"
         android:layout_height="wrap_content">
 
         <TextView
             android:text="Day"
-            android:background="@color/Purple"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
@@ -85,7 +86,6 @@
         <TextView
             android:id="@+id/day1.0"
             android:textAlignment="center"
-            android:background="@color/Purple"
             android:text="Sunday"
             android:layout_weight="1"
             android:layout_width="0px"
@@ -156,7 +156,6 @@
 
         <TextView
             android:text="MonDayDay"
-            android:background="@color/Purple"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
@@ -221,7 +220,6 @@
 
         <TextView
             android:text="TuesDay"
-            android:background="@color/Purple"
             android:layout_weight="1"
             android:layout_width="0px"
             android:textAlignment="center"
@@ -283,7 +281,6 @@
 
         <TextView
             android:text="WednesDay"
-            android:background="@color/Purple"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
@@ -345,7 +342,6 @@
 
         <TextView
             android:text="ThursDay"
-            android:background="@color/Purple"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"

@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView presentance = (TextView)findViewById(R.id.presentance);
         presentance.setOnClickListener(new View.OnClickListener() {
-                                       @Override
-                                       public void onClick(View view){
-                                           Intent i = new Intent(MainActivity.this, Presentance.class);
-                                           startActivity(i);
-                                       }
-                                   }
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this, Presentance.class);
+                startActivity(i);
+            }
+        }
         );
 
 

@@ -204,14 +204,27 @@ public class Presentance extends AppCompatActivity {
         //Working with Subject 1
         for(int i=0; i<n; i++){
             sub_name[i].setText(s[i].name);
-            sub_percentage[i].setText( "0%");
-            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
+            if(s[i].total_class == 0){
+                sub_percentage[i].setText("0%");
+                sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
+            } else {
+                int per = (s[i].present_classs*100)/ s[i].total_class;
+                sub_percentage[i].setText(Integer.toString(per) + "%");
+                sub_count[i].setText(s[i].present_classs+"/"+ s[i].total_class);
+
+
+                if(per<60){
+                    sub_percentage[i].setBackgroundColor(Color.parseColor("#ff0000"));
+                } else {
+                    sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
+                }
+            }
         }
 
 
 
 
-    } // End of onCreat
+    } // End of onCreate
 
     @Override
     protected void onDestroy(){

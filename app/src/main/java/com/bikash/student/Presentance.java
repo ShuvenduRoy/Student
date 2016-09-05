@@ -40,22 +40,6 @@ public class Presentance extends AppCompatActivity {
         }
 
 
-        try {
-            FileOutputStream file = openFileOutput("data.txt",MODE_WORLD_READABLE);
-            OutputStreamWriter writer = new OutputStreamWriter(file);
-            try {
-                for(int j=0; j<n; j++){
-                    writer.write(s[j].total_class + " ");
-                    writer.write(s[j].present_classs + " ");}
-                writer.flush();
-                writer.close();
-               // Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_SHORT).show();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
     public void presentButton0(View view){
@@ -92,24 +76,7 @@ public class Presentance extends AppCompatActivity {
             sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
         }
 
-        try {
-            FileOutputStream file = openFileOutput("data.txt",MODE_WORLD_READABLE);
-            OutputStreamWriter writer = new OutputStreamWriter(file);
 
-                try {
-                    for(int j=0; j<n; j++){
-                    writer.write(s[j].total_class + " ");
-                    writer.write(s[j].present_classs + " ");}
-                    writer.flush();
-                    writer.close();
-                    //Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_SHORT).show();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
 
@@ -162,7 +129,6 @@ public class Presentance extends AppCompatActivity {
                 e.printStackTrace();
             }
 
-            Toast.makeText(getBaseContext(), final_data , Toast.LENGTH_SHORT).show();
             Scanner sc = new Scanner(final_data);
             for(int i=0; i<n; i++){
                 s[i].total_class = sc.nextInt();
@@ -228,7 +194,22 @@ public class Presentance extends AppCompatActivity {
 
     @Override
     protected void onDestroy(){
-        Toast.makeText(getBaseContext(), "Destroy", Toast.LENGTH_SHORT).show();
+        try {
+            FileOutputStream file = openFileOutput("data.txt",MODE_WORLD_READABLE);
+            OutputStreamWriter writer = new OutputStreamWriter(file);
+            try {
+                for(int j=0; j<n; j++){
+                    writer.write(s[j].total_class + " ");
+                    writer.write(s[j].present_classs + " ");}
+                writer.flush();
+                writer.close();
+                // Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
         super.onDestroy();
     }

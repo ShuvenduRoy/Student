@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+
     android:background="@color/skyBlue"
     tools:context="com.bikash.student.Routine">
 
@@ -17,11 +18,11 @@
         android:orientation="horizontal"
         android:padding="5dp"
         android:layout_width="match_parent"
-        android:background="@color/green"
         android:layout_height="wrap_content">
 
         <TextView
             android:text="Day"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
@@ -31,6 +32,7 @@
             android:text="8.00 - 8.50"
             android:textAlignment="center"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
@@ -39,29 +41,34 @@
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
+            android:textColor="@color/White"
             android:layout_height="wrap_content" />
 
         <TextView
             android:text="9.40 - 10.30"
             android:textAlignment="center"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
         <TextView
             android:text="10.40 - 11.30"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
         <TextView
             android:text="11.30 - 12.40"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
         <TextView
             android:text="12.40 - 1.10"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
@@ -69,6 +76,7 @@
         <TextView
             android:text="2.30-5.00"
             android:textAlignment="center"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -85,6 +93,7 @@
 
         <TextView
             android:id="@+id/day1.0"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:text="Sunday"
             android:layout_weight="1"
@@ -97,12 +106,14 @@
             android:text=""
             android:layout_weight="1"
             android:layout_width="0px"
+            android:textColor="@color/White"
             android:layout_height="wrap_content" />
 
         <TextView
             android:id="@+id/day1_2"
             android:textAlignment="center"
             android:text=""
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -111,6 +122,7 @@
             android:id="@+id/day1_3"
             android:textAlignment="center"
             android:text=""
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -118,6 +130,7 @@
         <TextView
             android:textAlignment="center"
             android:id="@+id/day1_4"
+            android:textColor="@color/White"
             android:text=""
             android:layout_weight="1"
             android:layout_width="0px"
@@ -126,6 +139,7 @@
             android:text="OOP"
             android:id="@+id/day1_5"
             android:textAlignment="center"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -133,6 +147,7 @@
             android:text="EEE"
             android:textAlignment="center"
             android:id="@+id/day1_6"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -140,6 +155,7 @@
             android:text="Data Structure lab"
             android:textAlignment="center"
             android:id="@+id/day1_7"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -151,12 +167,14 @@
     <LinearLayout
         android:orientation="horizontal"
         android:padding="5dp"
+        android:textColor="@color/White"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="MonDayDay"
+            android:text="MonDay"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -166,12 +184,14 @@
             android:textAlignment="center"
             android:layout_weight="3"
             android:layout_width="0px"
+            android:textColor="@color/White"
             android:layout_height="wrap_content" />
 <!--
         <TextView
             android:text="8.50 - 9.40"
             android:textAlignment="center"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
@@ -179,6 +199,7 @@
             android:text="9.40 - 10.30"
             android:textAlignment="center"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
@@ -188,6 +209,7 @@
             android:textAlignment="center"
             android:text="Data Structure"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
         <TextView
@@ -195,16 +217,19 @@
             android:text="Computer archi"
             android:layout_weight="1"
             android:layout_width="0px"
+            android:textColor="@color/White"
             android:layout_height="wrap_content" />
         <TextView
             android:textAlignment="center"
             android:text="OOP"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
         <TextView
             android:text=""
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:textAlignment="center"
             android:layout_height="wrap_content" />
@@ -221,12 +246,14 @@
         <TextView
             android:text="TuesDay"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:textAlignment="center"
             android:layout_height="wrap_content" />
 
         <TextView
             android:text=""
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
@@ -235,6 +262,7 @@
         <TextView
             android:text="Computer Archi"
             android:textAlignment="center"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -242,11 +270,13 @@
         <TextView
             android:textAlignment="center"
             android:text="Math"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
         <TextView
+            android:textColor="@color/White"
             android:text="Data Structure"
             android:layout_weight="1"
             android:textAlignment="center"
@@ -255,6 +285,7 @@
         <TextView
             android:text="EEE"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
@@ -262,12 +293,14 @@
             android:text=""
             android:layout_weight="1"
             android:textAlignment="center"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
         <TextView
             android:text=""
             android:layout_weight="1"
             android:textAlignment="center"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
@@ -281,6 +314,7 @@
 
         <TextView
             android:text="WednesDay"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
@@ -288,6 +322,7 @@
 
         <TextView
             android:text=""
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
@@ -296,6 +331,7 @@
         <TextView
             android:text=""
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:textAlignment="center"
             android:layout_height="wrap_content" />
@@ -304,6 +340,7 @@
             android:text="Computer Archi"
             android:layout_weight="1"
             android:textAlignment="center"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
@@ -312,23 +349,27 @@
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
+            android:textColor="@color/White"
             android:layout_height="wrap_content" />
         <TextView
             android:text="Math"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
+            android:textColor="@color/White"
             android:layout_height="wrap_content" />
         <TextView
             android:text=""
             android:textAlignment="center"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
         <TextView
             android:text=""
             android:textAlignment="center"
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
@@ -345,17 +386,20 @@
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
+            android:textColor="@color/White"
             android:layout_height="wrap_content" />
 
         <TextView
             android:textAlignment="center"
             android:text=""
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
         <TextView
             android:text="Math"
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
@@ -363,6 +407,7 @@
 
         <TextView
             android:text="EEE"
+            android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
@@ -371,28 +416,32 @@
         <TextView
             android:textAlignment="center"
             android:text="OOP Lab"
-            android:layout_weight="2"
+            android:layout_weight="3"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 
-        <!--
+
         <TextView
             android:textAlignment="center"
-            android:text="11.30 - 12.40"
+            android:text=""
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
         <TextView
             android:textAlignment="center"
-            android:text="12.40 - 1.10"
+            android:text=""
+            android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
-            -->
+
         <TextView
             android:textAlignment="center"
             android:text=""
             android:layout_weight="1"
+            android:textColor="@color/White"
             android:layout_width="0px"
             android:layout_height="wrap_content" />
 

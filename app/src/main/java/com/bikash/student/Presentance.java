@@ -23,10 +23,10 @@ public class Presentance extends AppCompatActivity {
         sub_count[i].setText(s[i].present_classs+"/"+ s[i].total_class);
 
 
-        if(per>=60){
-            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
-        } else {
+        if(per<60){
             sub_percentage[i].setBackgroundColor(Color.parseColor("#ff0000"));
+        } else {
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
         }
     }
 
@@ -58,10 +58,10 @@ public class Presentance extends AppCompatActivity {
         sub_count[i].setText(s[i].present_classs+"/"+ s[i].total_class);
 
 
-        if(per>60){
-            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
-        } else {
+        if(per<60){
             sub_percentage[i].setBackgroundColor(Color.parseColor("#ff0000"));
+        } else {
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
         }
     }
 

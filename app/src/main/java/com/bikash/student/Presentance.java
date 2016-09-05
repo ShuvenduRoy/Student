@@ -5,6 +5,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 public class Presentance extends AppCompatActivity {
     int n = 5;
@@ -27,6 +37,24 @@ public class Presentance extends AppCompatActivity {
             sub_percentage[i].setBackgroundColor(Color.parseColor("#ff0000"));
         } else {
             sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
+        }
+
+
+        try {
+            FileOutputStream file = openFileOutput("data.txt",MODE_WORLD_READABLE);
+            OutputStreamWriter writer = new OutputStreamWriter(file);
+            try {
+                for(int j=0; j<n; j++){
+                    writer.write(s[j].total_class + " ");
+                    writer.write(s[j].present_classs + " ");}
+                writer.flush();
+                writer.close();
+               // Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
@@ -63,6 +91,25 @@ public class Presentance extends AppCompatActivity {
         } else {
             sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
         }
+
+        try {
+            FileOutputStream file = openFileOutput("data.txt",MODE_WORLD_READABLE);
+            OutputStreamWriter writer = new OutputStreamWriter(file);
+
+                try {
+                    for(int j=0; j<n; j++){
+                    writer.write(s[j].total_class + " ");
+                    writer.write(s[j].present_classs + " ");}
+                    writer.flush();
+                    writer.close();
+                    //Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -89,12 +136,45 @@ public class Presentance extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_presentance);
 
+
+
         //Making a teacher Object
         s[0] = new Subject("MicroProcessor",0,0);
         s[1] = new Subject("Advanced Algorithm",0,0);
         s[2] = new Subject("Numerical Method",0,0);
         s[3] = new Subject("Math",0,0);
         s[4] = new Subject("Economics",0,0);
+
+        try {
+            FileInputStream fis = openFileInput("data.txt");
+            InputStreamReader isr = new InputStreamReader(fis);
+
+            char[] data = new char[50];
+            String final_data = " ";
+            int size;
+            try{
+                while((size=isr.read(data))>0){
+                    String read_data = String.copyValueOf(data,0,size);
+                    final_data+=read_data;
+                    data = new char[50];
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Toast.makeText(getBaseContext(), final_data , Toast.LENGTH_SHORT).show();
+            Scanner sc = new Scanner(final_data);
+            for(int i=0; i<n; i++){
+                s[i].total_class = sc.nextInt();
+                s[i].present_classs = sc.nextInt();
+            }
+
+        } catch (FileNotFoundException e) {
+            Toast.makeText(getBaseContext(), "Data Not Found", Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
+
+
 
 
         //Getting textview for all ids bt its id
@@ -131,5 +211,12 @@ public class Presentance extends AppCompatActivity {
 
 
 
+    } // End of onCreat
+
+    @Override
+    protected void onDestroy(){
+        Toast.makeText(getBaseContext(), "Destroy", Toast.LENGTH_SHORT).show();
+
+        super.onDestroy();
     }
 }

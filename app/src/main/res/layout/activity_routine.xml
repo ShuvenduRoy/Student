@@ -26,7 +26,7 @@
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="8.00 - 8.50"
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="8.50 - 9.40"
@@ -42,7 +42,7 @@
             android:layout_weight="1"
             android:layout_width="0px"
             android:textColor="@color/White"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="9.40 - 10.30"
@@ -50,7 +50,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="10.40 - 11.30"
@@ -58,28 +58,28 @@
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="11.30 - 12.40"
             android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="12.40 - 1.10"
             android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="2.30-5.00"
             android:textAlignment="center"
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -98,7 +98,7 @@
             android:text="Sunday"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/day1_1"
@@ -107,7 +107,7 @@
             android:layout_weight="1"
             android:layout_width="0px"
             android:textColor="@color/White"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/day1_2"
@@ -116,7 +116,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:id="@+id/day1_3"
@@ -125,7 +125,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:textAlignment="center"
@@ -134,7 +134,7 @@
             android:text=""
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="OOP"
             android:id="@+id/day1_5"
@@ -142,7 +142,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="EEE"
             android:textAlignment="center"
@@ -150,7 +150,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="Data Structure lab"
             android:textAlignment="center"
@@ -158,7 +158,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -177,7 +177,7 @@
             android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="Digital Electronic Lab"
@@ -185,7 +185,7 @@
             android:layout_weight="3"
             android:layout_width="0px"
             android:textColor="@color/White"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 <!--
         <TextView
             android:text="8.50 - 9.40"
@@ -193,7 +193,7 @@
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="9.40 - 10.30"
@@ -201,7 +201,7 @@
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         -->
 
@@ -211,28 +211,28 @@
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:textAlignment="center"
             android:text="Computer archi"
             android:layout_weight="1"
             android:layout_width="0px"
             android:textColor="@color/White"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:textAlignment="center"
             android:text="OOP"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text=""
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
             android:textAlignment="center"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -249,7 +249,7 @@
             android:textColor="@color/White"
             android:layout_width="0px"
             android:textAlignment="center"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text=""
@@ -257,7 +257,7 @@
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="Computer Archi"
@@ -265,7 +265,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:textAlignment="center"
@@ -273,7 +273,7 @@
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:textColor="@color/White"
@@ -281,28 +281,28 @@
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="EEE"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text=""
             android:layout_weight="1"
             android:textAlignment="center"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text=""
             android:layout_weight="1"
             android:textAlignment="center"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -318,7 +318,7 @@
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text=""
@@ -326,7 +326,7 @@
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text=""
@@ -334,7 +334,7 @@
             android:textColor="@color/White"
             android:layout_width="0px"
             android:textAlignment="center"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="Computer Archi"
@@ -342,7 +342,7 @@
             android:textAlignment="center"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="OOP"
@@ -350,28 +350,28 @@
             android:layout_weight="1"
             android:layout_width="0px"
             android:textColor="@color/White"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text="Math"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
             android:textColor="@color/White"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text=""
             android:textAlignment="center"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:text=""
             android:textAlignment="center"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 
@@ -387,7 +387,7 @@
             android:layout_weight="1"
             android:layout_width="0px"
             android:textColor="@color/White"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:textAlignment="center"
@@ -395,7 +395,7 @@
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="Math"
@@ -403,7 +403,7 @@
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:text="EEE"
@@ -411,7 +411,7 @@
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
         <TextView
             android:textAlignment="center"
@@ -419,23 +419,25 @@
             android:layout_weight="3"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
-
+<!--
         <TextView
             android:textAlignment="center"
             android:text=""
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:textAlignment="center"
             android:text=""
             android:textColor="@color/White"
             android:layout_weight="1"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
+
+            -->
 
         <TextView
             android:textAlignment="center"
@@ -443,7 +445,7 @@
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

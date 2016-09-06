@@ -167,12 +167,12 @@ public class Presentance extends AppCompatActivity {
 
 
 
-        //Working with Subject 1
+        //Working with Subject
         for(int i=0; i<n; i++){
             sub_name[i].setText(s[i].name);
             if(s[i].total_class == 0){
                 sub_percentage[i].setText("0%");
-                sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
+                sub_percentage[i].setBackgroundColor(Color.parseColor("#FD8E09"));
             } else {
                 int per = (s[i].present_classs*100)/ s[i].total_class;
                 sub_percentage[i].setText(Integer.toString(per) + "%");

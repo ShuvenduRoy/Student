@@ -20,7 +20,7 @@
         <TextView
             android:id="@+id/t0"
             android:gravity="center_vertical"
-            android:text="Subject 1"
+            android:text="Subject 0"
             android:textSize="15dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -142,7 +142,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/t2"
-            android:text="Subject 1"
+            android:text="Subject 2"
             android:textSize="15dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -206,7 +206,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/t3"
-            android:text="Subject 1"
+            android:text="Subject 3"
             android:textSize="15dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -270,7 +270,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/t4"
-            android:text="Subject 1"
+            android:text="Subject 4"
             android:textSize="15dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"

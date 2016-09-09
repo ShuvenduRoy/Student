@@ -49,8 +49,6 @@ public class Routine extends AppCompatActivity {
     }
 
     public void changeClass(View view){
-        System.out.print("Clicked");
-
         editLayout.setVisibility(View.VISIBLE);
         currentClassView = (TextView) view;
     }

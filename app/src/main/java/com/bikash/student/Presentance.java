@@ -150,8 +150,8 @@ public class Presentance extends AppCompatActivity {
         editLayout = (LinearLayout) findViewById(R.id.editClassLayout);
 
         //Making a teacher Object
-        s[0] = new Subject("MicroProcessor",0,0);
-        s[1] = new Subject("Advanced Algorithm",0,0);
+        s[0] = new Subject("Advanced Algorithm",0,0);
+        s[1] = new Subject("MicroProcessor",0,0);
         s[2] = new Subject("Numerical Method",0,0);
         s[3] = new Subject("Math",0,0);
         s[4] = new Subject("Economics",0,0);
@@ -233,18 +233,71 @@ public class Presentance extends AppCompatActivity {
 
 
 
+        try {
+            FileInputStream f = openFileInput("sub.txt");
+            InputStreamReader is = new InputStreamReader(f);
+
+            char[] data = new char[50];
+            String final_data = " ";
+            int size;
+
+            try{
+                while((size=is.read(data))>0){
+                    String read_data = String.copyValueOf(data,0,size);
+                    final_data+=read_data;
+                    data = new char[50];
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            Scanner scn = new Scanner(final_data);
+
+            for(int i=0; i<n; i++){
+                String str = scn.nextLine();
+                sub_name[i].setText(str);
+            }
+
+
+
+        } catch (FileNotFoundException e) {
+
+            e.printStackTrace();
+        }
 
     } // End of onCreate
 
     @Override
     protected void onDestroy(){
+
+
+        try {
+            FileOutputStream f = openFileOutput("sub.txt",MODE_WORLD_READABLE);
+            OutputStreamWriter w = new OutputStreamWriter(f);
+            try {
+                for(int i=0; i<n; i++){
+                    String s = sub_name[i].getText().toString() + "\n";
+                    w.write(s);
+                }
+                w.flush();
+                w.close();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
         try {
             FileOutputStream file = openFileOutput("data.txt",MODE_WORLD_READABLE);
             OutputStreamWriter writer = new OutputStreamWriter(file);
             try {
                 for(int j=0; j<n; j++){
                     writer.write(s[j].total_class + " ");
-                    writer.write(s[j].present_classs + " ");}
+                    writer.write(s[j].present_classs + " ");
+                }
                 writer.flush();
                 writer.close();
                 // Toast.makeText(getBaseContext(), "Data Saved", Toast.LENGTH_SHORT).show();

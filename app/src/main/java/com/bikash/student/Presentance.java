@@ -52,7 +52,7 @@ public class Presentance extends AppCompatActivity {
     //Activity of Save Button
     public void saveClass(View view){
         EditClassName = (EditText) findViewById(R.id.changeClassName);
-        String className = EditClassName.getText().toString();
+        String className = EditClassName.getText().toString() + " ";
 
         sc = new Scanner(className);
         String finalName = sc.nextLine();

@@ -37,11 +37,20 @@ public class Routine extends AppCompatActivity {
 
     //Activity of Save Button
     public void saveClass(View view){
+        String className = " ";
+        String finalName = " ";
         EditClassName = (EditText) findViewById(R.id.changeClassName);
-        String className = EditClassName.getText().toString();
 
-        sc = new Scanner(className);
-        String finalName = sc.nextLine();
+        if(EditClassName.getText() !=null){
+            className = EditClassName.getText().toString() + " ";
+
+            sc = new Scanner(className);
+            finalName = sc.nextLine();
+        } else {
+            finalName= " ";
+        }
+
+
 
         currentClassView.setText(finalName);
         editLayout.setVisibility(View.INVISIBLE);

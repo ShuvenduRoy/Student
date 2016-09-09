@@ -19,6 +19,7 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class Presentance extends AppCompatActivity {
+    Scanner sc;
     int n = 5;
     public Subject[] s = new Subject[5];
     public TextView[] sub_name = new TextView[5];
@@ -48,10 +49,15 @@ public class Presentance extends AppCompatActivity {
     }
 
     //Activity of Save Button
+    //Activity of Save Button
     public void saveClass(View view){
         EditClassName = (EditText) findViewById(R.id.changeClassName);
         String className = EditClassName.getText().toString();
-        currentClassView.setText(className);
+
+        sc = new Scanner(className);
+        String finalName = sc.nextLine();
+
+        currentClassView.setText(finalName);
         editLayout.setVisibility(View.INVISIBLE);
         EditClassName.setText("");
     }

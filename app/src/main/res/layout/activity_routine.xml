@@ -95,7 +95,7 @@
             android:id="@+id/day1.0"
             android:textColor="@color/White"
             android:textAlignment="center"
-            android:text="Sunday"
+            android:text="Sun"
             android:layout_weight="1"
             android:layout_width="0px"
             android:layout_height="match_parent" />
@@ -179,7 +179,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="MonDay"
+            android:text="Mon"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:textAlignment="center"
@@ -190,6 +190,8 @@
             android:text="Digital Electronic Lab"
             android:textAlignment="center"
             android:layout_weight="1"
+            android:textSize="10sp"
+            android:id="@+id/day2_1"
             android:layout_width="0px"
             android:onClick="changeClass"
             android:textColor="@color/White"
@@ -197,6 +199,7 @@
 
         <TextView
             android:text="8.50 - 9.40"
+            android:id="@+id/day2_2"
             android:textAlignment="center"
             android:layout_weight="1"
             android:textColor="@color/White"
@@ -206,6 +209,7 @@
 
         <TextView
             android:text="9.40 - 10.30"
+            android:id="@+id/day2_3"
             android:textAlignment="center"
             android:layout_weight="1"
             android:onClick="changeClass"
@@ -216,6 +220,7 @@
 
 
         <TextView
+            android:id="@+id/day2_4"
             android:textAlignment="center"
             android:text="Data Structure"
             android:layout_weight="1"
@@ -224,6 +229,7 @@
             android:onClick="changeClass"
             android:layout_height="match_parent" />
         <TextView
+            android:id="@+id/day2_5"
             android:textAlignment="center"
             android:text="Computer archi"
             android:layout_weight="1"
@@ -234,6 +240,7 @@
         <TextView
             android:textAlignment="center"
             android:text="OOP"
+            android:id="@+id/day2_6"
             android:onClick="changeClass"
             android:layout_weight="1"
             android:textColor="@color/White"
@@ -241,6 +248,7 @@
             android:layout_height="match_parent" />
         <TextView
             android:text=""
+            android:id="@+id/day2_7"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
@@ -258,7 +266,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="TuesDay"
+            android:text="Tues"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
@@ -267,6 +275,7 @@
 
         <TextView
             android:text=""
+            android:id="@+id/day3_1"
             android:textColor="@color/White"
             android:layout_weight="1"
             android:onClick="changeClass"
@@ -275,6 +284,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day3_2"
             android:text="Computer Archi"
             android:textAlignment="center"
             android:textColor="@color/White"
@@ -284,6 +294,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day3_3"
             android:textAlignment="center"
             android:text="Math"
             android:onClick="changeClass"
@@ -293,6 +304,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day3_4"
             android:textColor="@color/White"
             android:text="Data Structure"
             android:layout_weight="1"
@@ -301,6 +313,7 @@
             android:layout_width="0px"
             android:layout_height="match_parent" />
         <TextView
+            android:id="@+id/day3_5"
             android:text="EEE"
             android:layout_weight="1"
             android:textColor="@color/White"
@@ -310,6 +323,7 @@
             android:layout_height="match_parent" />
         <TextView
             android:text=""
+            android:id="@+id/day3_6"
             android:onClick="changeClass"
             android:layout_weight="1"
             android:textAlignment="center"
@@ -317,6 +331,7 @@
             android:layout_width="0px"
             android:layout_height="match_parent" />
         <TextView
+            android:id="@+id/day3_7"
             android:text=""
             android:layout_weight="1"
             android:textAlignment="center"
@@ -334,7 +349,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="WednesDay"
+            android:text="Wed"
             android:textColor="@color/White"
             android:layout_weight="1"
             android:textAlignment="center"
@@ -342,6 +357,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day4_1"
             android:text=""
             android:textColor="@color/White"
             android:textAlignment="center"
@@ -352,6 +368,7 @@
 
         <TextView
             android:text=""
+            android:id="@+id/day4_2"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"
@@ -360,6 +377,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day4_3"
             android:text="Computer Archi"
             android:layout_weight="1"
             android:textAlignment="center"
@@ -369,6 +387,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day4_4"
             android:text="OOP"
             android:textAlignment="center"
             android:layout_weight="1"
@@ -377,6 +396,7 @@
             android:textColor="@color/White"
             android:layout_height="match_parent" />
         <TextView
+            android:id="@+id/day4_5"
             android:text="Math"
             android:textAlignment="center"
             android:layout_weight="1"
@@ -385,6 +405,7 @@
             android:textColor="@color/White"
             android:layout_height="match_parent" />
         <TextView
+            android:id="@+id/day4_6"
             android:text=""
             android:textAlignment="center"
             android:layout_weight="1"
@@ -393,6 +414,7 @@
             android:onClick="changeClass"
             android:layout_height="match_parent" />
         <TextView
+            android:id="@+id/day4_7"
             android:text=""
             android:textAlignment="center"
             android:layout_weight="1"
@@ -410,7 +432,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="ThursDay"
+            android:text="Thu"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_width="0px"
@@ -419,6 +441,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day5_1"
             android:textAlignment="center"
             android:text=""
             android:layout_weight="1"
@@ -428,6 +451,8 @@
             android:layout_height="match_parent" />
 
         <TextView
+
+            android:id="@+id/day5_2"
             android:text="Math"
             android:textColor="@color/White"
             android:layout_weight="1"
@@ -438,6 +463,7 @@
 
         <TextView
             android:text="EEE"
+            android:id="@+id/day5_3"
             android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_weight="1"
@@ -446,6 +472,7 @@
             android:layout_height="match_parent" />
 
         <TextView
+            android:id="@+id/day5_4"
             android:textAlignment="center"
             android:onClick="changeClass"
             android:text="OOP Lab"
@@ -456,6 +483,7 @@
 
 
         <TextView
+            android:id="@+id/day5_5"
             android:textAlignment="center"
             android:text=""
             android:textColor="@color/White"
@@ -466,6 +494,7 @@
         <TextView
             android:textAlignment="center"
             android:text=""
+            android:id="@+id/day5_6"
             android:onClick="changeClass"
             android:textColor="@color/White"
             android:layout_weight="1"
@@ -475,6 +504,7 @@
 
 
         <TextView
+            android:id="@+id/day5_7"
             android:textAlignment="center"
             android:text="ON TEST"
             android:onClick="changeClass"

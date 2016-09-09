@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,44 @@ public class Presentance extends AppCompatActivity {
     public TextView[] sub_name = new TextView[5];
     public TextView[] sub_percentage = new TextView[5];
     public TextView[] sub_count = new TextView[5];
+
+    EditText EditClassName;
+    TextView currentClassView;
+    LinearLayout editLayout;
+
+
+    public void Reset(View view){
+        for(int i=0; i<n; i++){
+            s[i].total_class=0;
+            s[i].present_classs=0;
+
+            sub_count[i].setText("0/0");
+            sub_percentage[i].setText("0%");
+            sub_percentage[i].setBackgroundColor(Color.parseColor("#FD8E09"));
+        }
+    }
+
+    //Activity of cancle Button
+    public void cancleClassChange(View view){
+        editLayout.setVisibility(View.INVISIBLE);
+        EditClassName.setText("");
+    }
+
+    //Activity of Save Button
+    public void saveClass(View view){
+        EditClassName = (EditText) findViewById(R.id.changeClassName);
+        String className = EditClassName.getText().toString();
+        currentClassView.setText(className);
+        editLayout.setVisibility(View.INVISIBLE);
+        EditClassName.setText("");
+    }
+
+    public void changeClass(View view){
+        System.out.print("Clicked");
+
+        editLayout.setVisibility(View.VISIBLE);
+        currentClassView = (TextView) view;
+    }
 
     //Adding functionality for the button "+" id = Present
     public void PresentButton(View view, int i){
@@ -45,11 +85,9 @@ public class Presentance extends AppCompatActivity {
     public void presentButton0(View view){
         PresentButton(view,0);
     }
-
     public void presentButton1(View view){
         PresentButton(view,1);
     }
-
     public void presentButton2(View view){
         PresentButton(view,2);
     }
@@ -83,7 +121,6 @@ public class Presentance extends AppCompatActivity {
     public void absentButton0(View view){
         AbsentButton(view, 0);
     }
-
     public void absentButton1(View view){
         AbsentButton(view, 1);
     }
@@ -104,6 +141,7 @@ public class Presentance extends AppCompatActivity {
         setContentView(R.layout.activity_presentance);
 
 
+        editLayout = (LinearLayout) findViewById(R.id.editClassLayout);
 
         //Making a teacher Object
         s[0] = new Subject("MicroProcessor",0,0);

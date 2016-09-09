@@ -22,6 +22,7 @@
             android:gravity="center_vertical"
             android:text="Subject 0"
             android:textSize="15dp"
+            android:onClick="changeClass"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:layout_width="0dp"
@@ -80,6 +81,7 @@
             android:id="@+id/t1"
             android:text="Subject 1"
             android:textSize="15dp"
+            android:onClick="changeClass"
             android:gravity="center_vertical"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -145,6 +147,7 @@
             android:text="Subject 2"
             android:textSize="15dp"
             android:paddingLeft="5dp"
+            android:onClick="changeClass"
             android:paddingRight="5dp"
             android:gravity="center_vertical"
             android:layout_width="0dp"
@@ -210,6 +213,7 @@
             android:textSize="15dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
+            android:onClick="changeClass"
             android:layout_width="0dp"
             android:layout_weight="3"
             android:gravity="center_vertical"
@@ -274,6 +278,7 @@
             android:textSize="15dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
+            android:onClick="changeClass"
             android:layout_width="0dp"
             android:layout_weight="3"
             android:gravity="center_vertical"
@@ -321,6 +326,82 @@
 
     </LinearLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:onClick="Reset"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/White"
+        android:id="@+id/reset"
+        android:layout_gravity="center_horizontal" />
+
+
+    <LinearLayout
+        android:layout_marginTop="35dp"
+        android:id="@+id/editClassLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/White"
+            android:text="Change the Class Name"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/changeClassName" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:onClick="cancleClassChange"
+                android:id="@+id/cancle" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:onClick="saveClass"
+                android:id="@+id/saveClass" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
 
 
 

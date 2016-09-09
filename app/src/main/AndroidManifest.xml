@@ -18,7 +18,7 @@
 
         <activity
             android:name=".Routine"
-            android:screenOrientation="landscape">
+            >
             //making the routing landscape mode
         </activity>
 

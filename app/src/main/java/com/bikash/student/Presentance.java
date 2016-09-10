@@ -238,7 +238,7 @@ public class Presentance extends AppCompatActivity {
             InputStreamReader is = new InputStreamReader(f);
 
             char[] data = new char[50];
-            String final_data = " ";
+            String final_data = "";
             int size;
 
             try{

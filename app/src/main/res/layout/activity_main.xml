@@ -28,7 +28,7 @@
 
 
     <TextView
-        android:text="Presentance Count"
+        android:text="Presence Count"
         android:padding="7dp"
         android:id="@+id/presentance"
         android:background="@color/category_phrases"

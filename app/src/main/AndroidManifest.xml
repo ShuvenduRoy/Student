@@ -22,7 +22,7 @@
             //making the routing landscape mode
         </activity>
 
-        <activity android:name=".Presentance"></activity>
+        <activity android:name=".Presence"></activity>
     </application>
 
 </manifest>

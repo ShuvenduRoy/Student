@@ -1,6 +1,8 @@
 package com.bikash.student;
 
+import android.content.DialogInterface;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +20,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
-public class Presentance extends AppCompatActivity {
+public class Presence extends AppCompatActivity {
     Scanner sc;
     int n = 5;
     public Subject[] s = new Subject[5];
@@ -32,14 +34,26 @@ public class Presentance extends AppCompatActivity {
 
 
     public void Reset(View view){
-        for(int i=0; i<n; i++){
-            s[i].total_class=0;
-            s[i].present_classs=0;
 
-            sub_count[i].setText("0/0");
-            sub_percentage[i].setText("0%");
-            sub_percentage[i].setBackgroundColor(Color.parseColor("#FD8E09"));
-        }
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Are You Sure")
+                .setMessage("This will delete all Presence data")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        for(i=0; i<n; i++){
+                            s[i].total_class=0;
+                            s[i].present_classs=0;
+
+                            sub_count[i].setText("0/0");
+                            sub_percentage[i].setText("0%");
+                            sub_percentage[i].setBackgroundColor(Color.parseColor("#FD8E09"));
+                        }
+                    }
+                })
+                .setNegativeButton("No" , null).show();
+
     }
 
     //Activity of cancle Button

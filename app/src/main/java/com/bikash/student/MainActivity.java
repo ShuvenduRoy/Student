@@ -7,13 +7,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -40,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         presentance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Intent i = new Intent(MainActivity.this, Presentance.class);
+                Intent i = new Intent(MainActivity.this, Presence.class);
                 startActivity(i);
             }
         }

@@ -45,6 +45,7 @@
 
     <TextView
         android:text="UpComing Event"
+        android:id="@+id/upComingEvent"
         android:padding="7dp"
         android:background="@color/category_phrases"
         android:textAlignment="center"

@@ -15,14 +15,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".Routine"
-            >
+        <activity android:name=".Routine">
             //making the routing landscape mode
         </activity>
-
-        <activity android:name=".Presence"></activity>
+        <activity android:name=".Presence" />
+        <activity android:name=".Events" />
+        <activity
+            android:name=".BasicEventsActivity"
+            android:label="@string/title_activity_basic_events"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

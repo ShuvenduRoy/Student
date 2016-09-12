@@ -39,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
         }
         );
 
+        final TextView upComingEvent = (TextView) findViewById(R.id.upComingEvent);
+        upComingEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, BasicEventsActivity.class);
+                startActivity(i);
+            }
+        });
+
 
     }
 

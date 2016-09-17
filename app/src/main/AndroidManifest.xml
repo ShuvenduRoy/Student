@@ -28,7 +28,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".File" />
         <activity android:name=".Facebook" />
-        <activity android:name=".GoogleDrive"></activity>
+        <activity android:name=".GoogleDrive" />
+        <activity android:name=".Developer"></activity>
     </application>
 
 </manifest>

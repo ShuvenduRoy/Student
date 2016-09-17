@@ -50,7 +50,7 @@
 
 
         <TextView
-            android:text="UpComing Event"
+            android:text="Coming Events"
             android:id="@+id/upComingEvent"
             android:padding="7dp"
             android:background="@color/category_phrases"
@@ -86,6 +86,7 @@
             android:textAlignment="center"
             android:textColor="@color/White"
             android:textSize="20dp"
+            android:id="@+id/developer"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="4dp"

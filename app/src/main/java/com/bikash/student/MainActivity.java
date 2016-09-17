@@ -61,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final TextView developer = (TextView) findViewById(R.id.developer);
+        developer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Developer.class);
+                startActivity(i);
+            }
+        });
+
         final LinearLayout developer_fb = (LinearLayout) findViewById(R.id.developer_fb);
         developer_fb.setOnClickListener(new View.OnClickListener() {
             @Override

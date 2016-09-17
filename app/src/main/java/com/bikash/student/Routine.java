@@ -29,9 +29,17 @@ public class Routine extends AppCompatActivity {
     String[][] period = new String[6][8];
     TextView[][] periodView = new TextView[6][8];
 
+
+
+    public void changeClass(View view){
+        editLayout.setVisibility(View.VISIBLE);
+        currentClassView = (TextView) view;
+    }
+
     //Activity of cancle Button
     public void cancleClassChange(View view){
         editLayout.setVisibility(View.INVISIBLE);
+        EditClassName = (EditText) findViewById(R.id.changeClassName);
         EditClassName.setText("");
     }
 
@@ -57,10 +65,6 @@ public class Routine extends AppCompatActivity {
         EditClassName.setText("");
     }
 
-    public void changeClass(View view){
-        editLayout.setVisibility(View.VISIBLE);
-        currentClassView = (TextView) view;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

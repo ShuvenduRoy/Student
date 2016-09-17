@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         }
         );
 
+
         final TextView upComingEvent = (TextView) findViewById(R.id.upComingEvent);
         upComingEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        final TextView file = (TextView) findViewById(R.id.file_layout);
+        file.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, File.class);
+                startActivity(i);
+            }
+        });
 
     }
 

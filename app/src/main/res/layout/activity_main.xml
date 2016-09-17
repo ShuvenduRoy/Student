@@ -60,6 +60,7 @@
 
     <TextView
         android:text="Semister Supporing file"
+        android:id="@+id/file_layout"
         android:padding="7dp"
         android:background="@color/category_phrases"
         android:textAlignment="center"

@@ -1,11 +1,13 @@
 package com.bikash.student;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -55,6 +57,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, File.class);
+                startActivity(i);
+            }
+        });
+
+        final LinearLayout developer_fb = (LinearLayout) findViewById(R.id.developer_fb);
+        developer_fb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://www.facebook.com/shuvendu.roy.758";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
                 startActivity(i);
             }
         });

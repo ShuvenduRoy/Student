@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/dev"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bikash.student.Developer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+
+
+        y<LinearLayout
+            android:paddingTop="10dp"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:paddingLeft="10dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:textColor="@color/White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:textSize="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Shuvendu Roy Bikash"
+                android:id="@+id/textView2"
+                />
+
+            <TextView
+                android:textColor="@color/White"
+                android:padding="3dp"
+                android:textSize="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="KUET CSE 2K14"
+                android:id="@+id/textView3"
+                />
+
+            <TextView
+                android:textColor="@color/White"
+                android:padding="3dp"
+                android:textSize="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="1407001"
+                android:id="@+id/textView4"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/bikash3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    `   `   <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_width="220dp"
+            android:textSize="14dp"
+            android:layout_height="wrap_content"
+            android:text="facebook.com/shuvendu.roy.758"
+            android:textAlignment="center"
+            android:id="@+id/fb"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_blue"
+            android:padding="5dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:padding="5dp"
+            android:textSize="14dp"
+            android:layout_margin="5dp"
+            android:layout_width="220dp"
+            android:background="@drawable/round_red"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="shuvendu1roy@gmail.com"
+            android:id="@+id/gm"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:padding="5dp"
+            android:textSize="14dp"
+            android:textAlignment="center"
+            android:background="@drawable/round_blur_li"
+            android:layout_margin="5dp"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="LinkedIn"
+            android:id="@+id/ln"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

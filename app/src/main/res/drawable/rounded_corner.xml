@@ -5,6 +5,7 @@
     <!-- view background color -->
     <solid
         android:color="@color/category_phrases" >
+
     </solid>
 
     <!-- view border color and width -->

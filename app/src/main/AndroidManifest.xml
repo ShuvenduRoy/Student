@@ -30,6 +30,18 @@
         <activity android:name=".Facebook" />
         <activity android:name=".GoogleDrive" />
         <activity android:name=".Developer"></activity>
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name=".MyNewIntentService"
+            android:exported="false" >
+        </service>
+
     </application>
 
 </manifest>

@@ -104,7 +104,7 @@
         <TextView
             android:id="@+id/day1_1"
             android:textAlignment="center"
-            android:text="Math"
+            android:text=""
             android:layout_weight="1"
             android:layout_width="0px"
             android:textColor="@color/White"
@@ -141,7 +141,7 @@
             android:layout_width="0px"
             android:layout_height="match_parent" />
         <TextView
-            android:text=""
+            android:text="Math"
             android:id="@+id/day1_5"
             android:textAlignment="center"
             android:textColor="@color/White"

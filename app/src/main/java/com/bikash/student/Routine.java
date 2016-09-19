@@ -155,6 +155,7 @@ public class Routine extends AppCompatActivity {
 
 
         } catch (FileNotFoundException e) {
+            Toast.makeText(getBaseContext(), "Click on the name to change it", Toast.LENGTH_SHORT).show();
 
             e.printStackTrace();
         }

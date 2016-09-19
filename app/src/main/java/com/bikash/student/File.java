@@ -28,7 +28,9 @@ public class File extends AppCompatActivity {
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(File.this, Facebook.class);
+                String url = "https://www.facebook.com/groups/1045359685480601/files/";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
                 startActivity(i);
             }
         });
@@ -42,6 +44,7 @@ public class File extends AppCompatActivity {
                 //startActivity(i);
 
                 String url = "https://drive.google.com/drive/folders/0BwCJpZiQPUEVNmktQjNYNl9WNXM?usp=sharing";
+                // CSE 15   https://drive.google.com/drive/folders/0B9cs809OafKXTXBEamN4a25GcGM?usp=sharing
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);

@@ -21,11 +21,7 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        Intent notifyIntent = new Intent(this,MyReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 3, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
-                1000 * 60 * 60 * 24, pendingIntent); //AlarmManager.INTERVAL_DAY
+
 
 
         //Routine activity

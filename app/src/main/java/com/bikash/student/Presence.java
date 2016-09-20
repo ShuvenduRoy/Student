@@ -29,14 +29,45 @@ import java.util.Scanner;
 public class Presence extends AppCompatActivity {
     Scanner sc;
     int n = 5;
-    public Subject[] s = new Subject[5];
-    public TextView[] sub_name = new TextView[5];
-    public TextView[] sub_percentage = new TextView[5];
-    public TextView[] sub_count = new TextView[5];
+
+    // Static is required to access it from other class in this case from EditPresence class
+
+    static public Subject[] s = new Subject[5];
+    static public TextView[] sub_name = new TextView[5];
+    static public TextView[] sub_percentage = new TextView[5];
+    static public TextView[] sub_count = new TextView[5];
 
     EditText EditClassName;
     TextView currentClassView;
     LinearLayout editLayout;
+
+    /*
+    we need another activity to edit the presence count
+    and EditPresent function will start a new activity with the integer i the index of subject
+     */
+
+    public void EditPresent(View view, int i){
+
+        Intent intent = new Intent(Presence.this, EditPresence.class);
+        intent.putExtra("id", i);
+        startActivity(intent);
+    }
+
+    public void EditView0(View view){
+        EditPresent(view,0);
+    }
+    public void EditView1(View view){
+        EditPresent(view,1);
+    }
+    public void EditView2(View view){
+        EditPresent(view,2);
+    }
+    public void EditView3(View view){
+        EditPresent(view,3);
+    }
+    public void EditView4(View view){
+        EditPresent(view,4);
+    }
 
 
     public void Reset(View view){
@@ -173,11 +204,11 @@ public class Presence extends AppCompatActivity {
         getSupportActionBar().setTitle("Presence");
 
         //Making a teacher Object
-        s[0] = new Subject("Advanced Algorithm",0,0);
-        s[1] = new Subject("MicroProcessor",0,0);
+        s[0] = new Subject("Advance Algorithm",0,0);
+        s[1] = new Subject("Microcontroller",0,0);
         s[2] = new Subject("Numerical Method",0,0);
         s[3] = new Subject("Math",0,0);
-        s[4] = new Subject("Economics",0,0);
+        s[4] = new Subject("Hum",0,0);
 
         try {
             FileInputStream fis = openFileInput("data.txt");
@@ -295,6 +326,32 @@ public class Presence extends AppCompatActivity {
         }
 
     } // End of onCreate
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+
+        //Working with Subject
+        for(int i=0; i<n; i++){
+            sub_name[i].setText(s[i].name);
+            if(s[i].total_class == 0){
+                sub_percentage[i].setText("0%");
+                sub_percentage[i].setBackgroundColor(Color.parseColor("#FD8E09"));
+            } else {
+                int per = (s[i].present_classs*100)/ s[i].total_class;
+                sub_percentage[i].setText(Integer.toString(per) + "%");
+                sub_count[i].setText(s[i].present_classs+"/"+ s[i].total_class);
+
+
+                if(per<60){
+                    sub_percentage[i].setBackgroundColor(Color.parseColor("#ff0000"));
+                } else {
+                    sub_percentage[i].setBackgroundColor(Color.parseColor("#379237"));
+                }
+            }
+        }
+    }
 
     @Override
     protected void onDestroy(){

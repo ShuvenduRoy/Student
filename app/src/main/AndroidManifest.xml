@@ -29,19 +29,18 @@
         <activity android:name=".File" />
         <activity android:name=".Facebook" />
         <activity android:name=".GoogleDrive" />
-        <activity android:name=".Developer"></activity>
+        <activity android:name=".Developer" />
 
         <receiver
             android:name=".MyReceiver"
             android:enabled="true"
-            android:exported="false" >
-        </receiver>
+            android:exported="false"></receiver>
 
         <service
             android:name=".MyNewIntentService"
-            android:exported="false" >
-        </service>
+            android:exported="false"></service>
 
+        <activity android:name=".EditPresence"></activity>
     </application>
 
 </manifest>

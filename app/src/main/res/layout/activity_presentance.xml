@@ -40,6 +40,7 @@
             android:id="@+id/absent0" />
 
         <TextView
+            android:onClick="EditView0"
             android:id="@+id/t0p"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -59,6 +60,7 @@
             android:layout_weight="1"
             android:layout_height="35dp" />
         <TextView
+            android:onClick="EditView0"
             android:id="@+id/count_0"
             android:text="0/0"
             android:paddingRight="5dp"
@@ -100,6 +102,7 @@
             android:id="@+id/absent1" />
 
         <TextView
+            android:onClick="EditView1"
             android:id="@+id/t1p"
             android:textAlignment="center"
             android:paddingLeft="5dp"
@@ -119,6 +122,7 @@
             android:layout_weight="1"
             android:layout_height="35dp" />
         <TextView
+            android:onClick="EditView1"
             android:id="@+id/count_1"
             android:text="0/0"
             android:paddingRight="5dp"
@@ -165,6 +169,7 @@
             android:id="@+id/absent2" />
 
         <TextView
+            android:onClick="EditView2"
             android:id="@+id/t2p"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -184,6 +189,7 @@
             android:layout_weight="1"
             android:layout_height="35dp" />
         <TextView
+            android:onClick="EditView2"
             android:id="@+id/count_2"
             android:text="0/0"
             android:paddingRight="5dp"
@@ -230,6 +236,7 @@
             android:id="@+id/absent3" />
 
         <TextView
+            android:onClick="EditView3"
             android:id="@+id/t3p"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -249,6 +256,7 @@
             android:layout_weight="1"
             android:layout_height="35dp" />
         <TextView
+            android:onClick="EditView3"
             android:id="@+id/count_3"
             android:text="0/0"
             android:paddingRight="5dp"
@@ -295,6 +303,7 @@
             android:id="@+id/absent4" />
 
         <TextView
+            android:onClick="EditView4"
             android:id="@+id/t4p"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
@@ -314,6 +323,7 @@
             android:layout_weight="1"
             android:layout_height="35dp" />
         <TextView
+            android:onClick="EditView4"
             android:id="@+id/count_4"
             android:text="0/0"
             android:paddingRight="5dp"

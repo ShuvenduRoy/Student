@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -24,7 +25,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Calendar;
 import java.util.Scanner;
+
+import static java.util.Calendar.*;
 
 public class Presence extends AppCompatActivity {
     Scanner sc;
@@ -234,11 +238,22 @@ public class Presence extends AppCompatActivity {
             }
 
         } catch (FileNotFoundException e) {
+
+            Calendar calendar = getInstance();
+            calendar.set(HOUR_OF_DAY,1);
+            calendar.set(MINUTE, 10);
+            calendar.set(SECOND, 00);
+            calendar.set(Calendar.AM_PM, Calendar.PM);
+
+
             Intent notifyIntent = new Intent(this,MyReceiver.class);
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 3, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 3, notifyIntent, 0);
             AlarmManager alarmManager = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis(),
-                    AlarmManager.INTERVAL_DAY, pendingIntent); //AlarmManager.INTERVAL_DAY
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis() , AlarmManager.INTERVAL_DAY, pendingIntent);
+
+            Log.i("time ",Long.toString(System.currentTimeMillis()));
+            Log.i("time ", Long.toString(calendar.getTimeInMillis()));
+
 
             Toast.makeText(getBaseContext(), "Click on the name to change it", Toast.LENGTH_SHORT).show();
             e.printStackTrace();

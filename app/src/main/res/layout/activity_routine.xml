@@ -476,7 +476,7 @@
             android:id="@+id/day5_4"
             android:textAlignment="center"
             android:onClick="changeClass"
-            android:text="Algo"
+            android:text="Micro Controller"
             android:layout_weight="1"
             android:textColor="@color/White"
             android:layout_width="0px"

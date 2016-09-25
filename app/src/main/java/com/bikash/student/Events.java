@@ -2,9 +2,7 @@ package com.bikash.student;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -19,7 +17,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 import java.util.Calendar;
-import java.util.HashSet;
 
 public class Events extends AppCompatActivity implements TextWatcher {
     EditText editText;
@@ -120,17 +117,17 @@ public class Events extends AppCompatActivity implements TextWatcher {
         BasicEventsActivity.events.set(noteId, String.valueOf(charSequence));
         BasicEventsActivity.arrayAdapter.notifyDataSetChanged();
 
-        if(BasicEventsActivity.set == null){
-            BasicEventsActivity.set = new HashSet<String>();
-        } else {
-            BasicEventsActivity.set.clear();
-        }
-
-        SharedPreferences sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
-
-        BasicEventsActivity.set.addAll(BasicEventsActivity.events);
-        sharedPreferences.edit().remove("events").apply();
-        sharedPreferences.edit().putStringSet("events", BasicEventsActivity.set).apply();
+//        if(BasicEventsActivity.set == null){
+//            BasicEventsActivity.set = new HashSet<String>();
+//        } else {
+//            BasicEventsActivity.set.clear();
+//        }
+//
+//        SharedPreferences sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
+//
+//        BasicEventsActivity.set.addAll(BasicEventsActivity.events);
+//        sharedPreferences.edit().remove("events").apply();
+//        sharedPreferences.edit().putStringSet("events", BasicEventsActivity.set).apply();
 
     }
 

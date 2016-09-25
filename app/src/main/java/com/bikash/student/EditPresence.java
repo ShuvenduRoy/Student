@@ -1,8 +1,7 @@
 package com.bikash.student;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -51,5 +50,7 @@ public class EditPresence extends AppCompatActivity {
 
         Presence.s[i].present_classs = Integer.parseInt(str1); // making string a integer
         Presence.s[i].total_class = Integer.parseInt(str2);
+
+        finish();
     }
 }

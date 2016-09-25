@@ -56,13 +56,16 @@
         android:orientation="horizontal"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="250dp">
 
 
         <TimePicker
+            android:scaleX=".5"
+            android:scaleY=".5"
+            android:layout_marginTop="-75dp"
             android:id="@+id/timePicker"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout

@@ -1,10 +1,13 @@
 package com.bikash.student;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -13,28 +16,59 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class BasicEventsActivity extends AppCompatActivity {
     ListView listView;
-    static ArrayList<String> events = new ArrayList<>();
+    static ArrayList<String> events;
     static ArrayAdapter arrayAdapter;
     //static Set<String> set;
     //SharedPreferences sharedPreferences;
+    SQLiteDatabase mydatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_basic_events);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
-
         getSupportActionBar().setTitle("UpComing Events");
 
+
+
+
+        mydatabase = this.openOrCreateDatabase("Events", MODE_PRIVATE, null);
+        events = new ArrayList<>();
+
+
         listView = (ListView) findViewById(R.id.listView);
+
+        try{
+            mydatabase.execSQL("CREATE TABLE IF NOT EXISTS events (event VARCHAR)");
+
+            Cursor c = mydatabase.rawQuery("SELECT * FROM events", null);
+
+            int eventIndex = c.getColumnIndex("event");
+
+            c.moveToFirst();
+            while(c!=null){
+
+                String evnetName = c.getString(eventIndex);
+                c.moveToNext();
+
+                events.add(evnetName);
+                Log.i("Event", evnetName);
+            }
+        } catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        Collections.sort(events);
 
 
 
@@ -146,4 +180,22 @@ public class BasicEventsActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onDestroy() {
+
+        mydatabase.execSQL("CREATE TABLE IF NOT EXISTS events (event VARCHAR)" );
+
+        mydatabase.delete("events",null,null);
+
+
+        for(int i=0; i<events.size(); i++){
+
+            String e = events.get(i);
+            String sql = "INSERT INTO events (event) VALUES ('"+e+"') ";
+            mydatabase.execSQL(sql);
+
+        }
+
+        super.onDestroy();
+    }
 }

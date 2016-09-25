@@ -40,9 +40,11 @@ public class BasicEventsActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("UpComing Events");
 
-        listView = (ListView) findViewById(R.id.listView);
+        //listView = (ListView) findViewById(R.id.listView);
 
         String bikash;
+
+
 
 
         //Storing Data

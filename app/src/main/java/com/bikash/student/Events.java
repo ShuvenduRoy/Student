@@ -68,11 +68,26 @@ public class Events extends AppCompatActivity implements TextWatcher {
     public void saveTime(View view){
         int hour = timePicker.getCurrentHour();
         int min = timePicker.getCurrentMinute();
-        time = hour + ":" + min;
+
+        String sunTime;
+        if(hour>=12){
+            sunTime="PM";
+        } else {
+            sunTime="AM";
+        }
+
+        hour = hour%12;
+
+        if(hour==0){
+            hour = 12;
+        }
+
+        time = hour + ":" + min+" "+sunTime;
         Log.i("Time", time);
 
         String s = setDateTextView.getText() + " " + time + "\n";
-        editText.setText(s + editText.getText());
+        s += editText.getText();
+        editText.setText(s);
 
         finish();
     }
@@ -102,8 +117,8 @@ public class Events extends AppCompatActivity implements TextWatcher {
     };
 
     private void showDate(int year, int month, int day) {
-        setDateTextView.setText(new StringBuilder().append(day).append("/")
-                .append(month).append("/").append(year));
+        setDateTextView.setText(new StringBuilder().append(year).append("/")
+                .append(month).append("/").append(day));
     }
 
 

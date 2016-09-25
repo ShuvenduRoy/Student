@@ -1,10 +1,12 @@
 package com.bikash.student;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -107,49 +109,34 @@ public class BasicEventsActivity extends AppCompatActivity {
             }
         });
 
-//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-//
-//                new AlertDialog.Builder(BasicEventsActivity.this)
-//                        .setIcon(android.R.drawable.ic_dialog_alert)
-//                        .setTitle("Are you sure?")
-//                        .setMessage("Do you want to delete this note?")
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//
-//                                events.remove(position);
-//
-//                                SharedPreferences sharedPreferences = BasicEventsActivity.this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
-//
-//                                if (set == null) {
-//
-//                                    set = new HashSet<String>();
-//
-//                                } else {
-//
-//                                    set.clear();
-//
-//                                }
-//
-//                                set.addAll(events);
-//                                sharedPreferences.edit().remove("notes").apply();
-//                                sharedPreferences.edit().putStringSet("notes", set).apply();
-//                                arrayAdapter.notifyDataSetChanged();
-//
-//                            }
-//                        })
-//                        .setNegativeButton("No", null)
-//                        .show();
-//
-//                return true;
-//            }
-//        });
-//
-//
-//
-//
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+
+                new AlertDialog.Builder(BasicEventsActivity.this)
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle("Are you sure?")
+                        .setMessage("Do you want to delete this note?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                events.remove(position);
+
+                                arrayAdapter.notifyDataSetChanged();
+
+                            }
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
+
+                return true;
+            }
+        });
+
+
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

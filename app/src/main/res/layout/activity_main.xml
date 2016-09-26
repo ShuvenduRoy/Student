@@ -103,7 +103,7 @@
         android:layout_weight="1">
         <TextView
             android:layout_width="match_parent"
-            android:text="Version 1.1"
+            android:text="Version 2.0"
             android:textColor="@color/Black"
             android:textAlignment="center"
             android:layout_height="wrap_content" />

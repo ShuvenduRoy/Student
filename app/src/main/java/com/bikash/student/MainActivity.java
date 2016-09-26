@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity
     private String mUsername = "ANONYMOUS";
     private String mPhotoUrl;
     private GoogleApiClient mGoogleApiClient;
+    private String userGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +60,11 @@ public class MainActivity extends AppCompatActivity
                 .addApi(Auth.GOOGLE_SIGN_IN_API)
                 .build();
 
+        if(userGroup==null)
+        {
+            Intent i = new Intent(MainActivity.this, LocalSignIn.class);
+            startActivity(i);
+        }
 
 
         //Routine activity

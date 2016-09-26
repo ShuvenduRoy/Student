@@ -15,6 +15,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -106,6 +107,7 @@ public class Events extends AppCompatActivity implements TextWatcher {
 
 
         mFirebaseDatabaseReference.child("events").child(MainActivity.userGroup).push().setValue(e);
+        Toast.makeText(this,"Uploading...",Toast.LENGTH_LONG).show();
 
         finish();
     }
@@ -147,8 +149,12 @@ public class Events extends AppCompatActivity implements TextWatcher {
 
     @Override
     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-        BasicEventsActivity.events.set(noteId, String.valueOf(charSequence));
-        BasicEventsActivity.arrayAdapter.notifyDataSetChanged();
+        /**
+         * This two lines were required in local data base system but no lonfer required
+         */
+
+        //BasicEventsActivity.events.set(noteId, String.valueOf(charSequence));
+        //BasicEventsActivity.arrayAdapter.notifyDataSetChanged();
 
     }
 

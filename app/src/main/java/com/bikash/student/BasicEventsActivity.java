@@ -48,6 +48,15 @@ public class BasicEventsActivity extends AppCompatActivity {
         Toast.makeText(this,"Syncing events...",Toast.LENGTH_LONG).show();
 
 
+
+
+        mydatabase = this.openOrCreateDatabase("Events", MODE_PRIVATE, null);
+        events = new ArrayList<>();
+
+
+        listView = (ListView) findViewById(R.id.listView);
+
+
         /**
          * Fire Base data base added
          * onchildAdded listener will keep arraylist updated
@@ -63,6 +72,7 @@ public class BasicEventsActivity extends AppCompatActivity {
                 String eventadded = new String(e.getDate() + " " + e.getTime() + "\n" + e.getEvent());
 
                 events.add(eventadded);
+                Collections.sort(events);
                 arrayAdapter.notifyDataSetChanged();
 
             }
@@ -91,12 +101,6 @@ public class BasicEventsActivity extends AppCompatActivity {
 
 
 
-
-        mydatabase = this.openOrCreateDatabase("Events", MODE_PRIVATE, null);
-        events = new ArrayList<>();
-
-
-        listView = (ListView) findViewById(R.id.listView);
 
 
         /**

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:background="@drawable/wallblue"
+    tools:context="com.bikash.student.Routine">
+
+
+    <!--Class time -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Day"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="8.00 - 8.50"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="8.50 - 9.40"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:textColor="@color/White"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="9.40 - 10.30"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="10.40 - 11.30"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="11.30 - 12.40"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="12.40 - 1.10"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="2.30-5.00"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <!--Sunday class routine -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:id="@+id/day1.0"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:text="Sun"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day1_1"
+            android:textAlignment="center"
+            android:text=""
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:textColor="@color/White"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day1_2"
+            android:textAlignment="center"
+            android:text="Hum"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day1_3"
+            android:textAlignment="center"
+            android:text="Micro Conroler"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/day1_4"
+            android:textColor="@color/White"
+            android:text="Algo"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="Math"
+            android:id="@+id/day1_5"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text=""
+            android:textAlignment="center"
+            android:id="@+id/day1_6"
+            android:textColor="@color/White"
+            android:onClick="changeClass"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="Algo Lab"
+            android:textAlignment="center"
+            android:onClick="changeClass"
+            android:id="@+id/day1_7"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <!--Monday -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:textColor="@color/White"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Mon"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text=""
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:id="@+id/day2_1"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:textColor="@color/White"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="Hum"
+            android:id="@+id/day2_2"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="Micro Conroler"
+            android:id="@+id/day2_3"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+
+
+        <TextView
+            android:id="@+id/day2_4"
+            android:textAlignment="center"
+            android:text="Program Lab"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/day2_5"
+            android:textAlignment="center"
+            android:text=""
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:textColor="@color/White"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textAlignment="center"
+            android:text=""
+            android:id="@+id/day2_6"
+            android:onClick="changeClass"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text=""
+            android:id="@+id/day2_7"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:textAlignment="center"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--TuesDay -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Tues"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:textAlignment="center"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text=""
+            android:id="@+id/day3_1"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day3_2"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day3_3"
+            android:textAlignment="center"
+            android:text="Hum"
+            android:onClick="changeClass"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day3_4"
+            android:textColor="@color/White"
+            android:text="Math"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/day3_5"
+            android:text="Num Method"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="Algo"
+            android:id="@+id/day3_6"
+            android:onClick="changeClass"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/day3_7"
+            android:text="Micro Lab"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:onClick="changeClass"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Wed"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day4_1"
+            android:text=""
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:onClick="changeClass"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text="Num Method"
+            android:id="@+id/day4_2"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:textAlignment="center"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day4_3"
+            android:text="Algo"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day4_4"
+            android:text="Micro Lab"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:textColor="@color/White"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/day4_5"
+            android:text=""
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:textColor="@color/White"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/day4_6"
+            android:text=""
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/day4_7"
+            android:text=""
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Thu"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:textColor="@color/White"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day5_1"
+            android:textAlignment="center"
+            android:text="Num Lab"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:onClick="changeClass"
+            android:layout_height="match_parent" />
+
+        <TextView
+
+            android:id="@+id/day5_2"
+            android:text=""
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:textAlignment="center"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:text=""
+            android:id="@+id/day5_3"
+            android:textColor="@color/White"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/day5_4"
+            android:textAlignment="center"
+            android:onClick="changeClass"
+            android:text="Algo"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/day5_5"
+            android:textAlignment="center"
+            android:text="Math"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:onClick="changeClass"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textAlignment="center"
+            android:text="Num Method"
+            android:id="@+id/day5_6"
+            android:onClick="changeClass"
+            android:textColor="@color/White"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+
+
+        <TextView
+            android:id="@+id/day5_7"
+            android:textAlignment="center"
+            android:text=""
+            android:onClick="changeClass"
+            android:layout_weight="1"
+            android:textColor="@color/White"
+            android:layout_width="0px"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="35dp"
+        android:id="@+id/editClassLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/White"
+            android:text="Change the Period Name"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/changeClassName" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:onClick="cancleClassChange"
+                android:id="@+id/cancle" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:onClick="saveClass"
+                android:id="@+id/saveClass" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "93583264817",
+    "firebase_url": "https://student-eaf3d.firebaseio.com",
+    "project_id": "student-eaf3d",
+    "storage_bucket": "student-eaf3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93583264817:android:2b88f3be492e4942",
+        "android_client_info": {
+          "package_name": "com.bikash.student"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93583264817-ejh989d6nvr07ro3tdjc9co8hbl6h4l3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bikash.student",
+            "certificate_hash": "18C022ABDDBEA32804BFE80D5E445A6167468F0E"
+          }
+        },
+        {
+          "client_id": "93583264817-rm7kpsh1vh194n0oep4430ghls4qn87k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTh01ScVeuFdbgZKOVayEkBt5mm3Guu7Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93583264817-rm7kpsh1vh194n0oep4430ghls4qn87k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

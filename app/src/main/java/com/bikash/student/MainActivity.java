@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
 
         } else {
 
-            Toast.makeText(getBaseContext(), "Your are logged into group\n      " + userGroup, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Your are logged into group\n         " + userGroup, Toast.LENGTH_LONG).show();
 
         }
 
@@ -96,6 +96,8 @@ public class MainActivity extends AppCompatActivity
                 public void onClick(View view){
                     Intent i = new Intent(MainActivity.this, Routine.class);
                     startActivity(i);
+                    finish();
+                    return;
                 }
             }
         );
@@ -151,6 +153,19 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+    }
+
+
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        if(userGroup=="")
+        {
+            finish();
+
+        }
     }
 
     @Override

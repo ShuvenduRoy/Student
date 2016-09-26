@@ -1,6 +1,8 @@
 package com.bikash.student;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -31,7 +33,8 @@ public class MainActivity extends AppCompatActivity
     private String mUsername = "ANONYMOUS";
     private String mPhotoUrl;
     private GoogleApiClient mGoogleApiClient;
-    private String userGroup;
+    public static String userGroup = "";
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,16 @@ public class MainActivity extends AppCompatActivity
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
+        sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
+
+        try{
+
+            userGroup = sharedPreferences.getString("userGroup", "");
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
 
         // Initialize Firebase Auth
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -60,11 +73,19 @@ public class MainActivity extends AppCompatActivity
                 .addApi(Auth.GOOGLE_SIGN_IN_API)
                 .build();
 
-        if(userGroup==null)
+        /**
+         * Local Authorization Check
+         */
+
+        if(userGroup=="")
         {
             Intent i = new Intent(MainActivity.this, LocalSignIn.class);
             startActivity(i);
+
+            //sharedPreferences.edit().putString("userGroup", userGroup).apply();
         }
+
+        Toast.makeText(getBaseContext(), userGroup, Toast.LENGTH_SHORT).show();
 
 
         //Routine activity

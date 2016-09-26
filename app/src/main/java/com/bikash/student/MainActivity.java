@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity
     public static String userGroup = "";
     SharedPreferences sharedPreferences;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,6 +120,16 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, BasicEventsActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        final TextView groupChat = (TextView) findViewById(R.id.groupChatTextview);
+        groupChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, GroupChat.class);
                 startActivity(i);
             }
         });

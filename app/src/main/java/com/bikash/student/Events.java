@@ -31,8 +31,11 @@ public class Events extends AppCompatActivity implements TextWatcher {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().setTitle("Create New Events");
+
         setContentView(R.layout.activity_events);
 
 
@@ -47,7 +50,7 @@ public class Events extends AppCompatActivity implements TextWatcher {
         day = calendar.get(Calendar.DAY_OF_MONTH);
         showDate(year, month+1, day);
 
-        getSupportActionBar().setTitle("Create New Events");
+
 
         Intent i = getIntent();
         noteId = i.getIntExtra("Id", -1);

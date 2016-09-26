@@ -30,6 +30,7 @@
         <activity android:name=".Facebook" />
         <activity android:name=".GoogleDrive" />
         <activity android:name=".Developer" />
+        <activity android:name=".SignInActivity" />
 
         <receiver
             android:name=".MyReceiver"
@@ -41,6 +42,7 @@
             android:exported="false"></service>
 
         <activity android:name=".EditPresence"></activity>
+
     </application>
 
 </manifest>

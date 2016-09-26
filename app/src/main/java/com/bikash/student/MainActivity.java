@@ -82,10 +82,11 @@ public class MainActivity extends AppCompatActivity
             Intent i = new Intent(MainActivity.this, LocalSignIn.class);
             startActivity(i);
 
-            //sharedPreferences.edit().putString("userGroup", userGroup).apply();
-        }
+        } else {
 
-        Toast.makeText(getBaseContext(), userGroup, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getBaseContext(), "Your are logged into group\n      " + userGroup, Toast.LENGTH_SHORT).show();
+
+        }
 
 
         //Routine activity

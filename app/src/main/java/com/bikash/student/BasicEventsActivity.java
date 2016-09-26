@@ -17,6 +17,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -27,6 +33,7 @@ public class BasicEventsActivity extends AppCompatActivity {
     //static Set<String> set;
     //SharedPreferences sharedPreferences;
     SQLiteDatabase mydatabase;
+    private DatabaseReference mFirebaseDatabaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,42 @@ public class BasicEventsActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("UpComing Events");
+
+        mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
+
+        mFirebaseDatabaseReference.child("events").child(MainActivity.userGroup).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Event e = dataSnapshot.getValue(Event.class);
+
+                String eventadded = new String(e.getDate() + " " + e.getTime() + "\n" + e.getEvent());
+
+                events.add(eventadded);
+                arrayAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
 
 
 
@@ -75,20 +118,6 @@ public class BasicEventsActivity extends AppCompatActivity {
 
 
 
-
-//        //Storing Data
-//        sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
-//        set = sharedPreferences.getStringSet("events", null);
-//
-//        events.clear();
-//
-//        if(set!=null){
-//            events.addAll(set);
-//        } else {
-//            set = new HashSet<String>();
-//            set.addAll(events);
-//            sharedPreferences.edit().putStringSet("events", set).apply();
-//        }
 
 
 
@@ -142,20 +171,7 @@ public class BasicEventsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 events.add("");
-//                sharedPreferences = BasicEventsActivity.this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
-//
-//
-//                if(set == null){
-//                    set = new HashSet<String>();
-//                } else {
-//                    set.clear();
-//                }
-//
-//                set.addAll(events);
-//                arrayAdapter.notifyDataSetChanged();
-//
-//                sharedPreferences.edit().remove("events").apply();
-//                sharedPreferences.edit().putStringSet("events", set).apply();
+
 
 
                 Intent i = new Intent(getApplicationContext(), Events.class);
@@ -173,6 +189,7 @@ public class BasicEventsActivity extends AppCompatActivity {
         mydatabase.execSQL("CREATE TABLE IF NOT EXISTS events (event VARCHAR)" );
 
         mydatabase.delete("events",null,null);
+
 
 
         for(int i=0; i<events.size(); i++){

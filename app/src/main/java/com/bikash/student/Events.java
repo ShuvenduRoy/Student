@@ -16,6 +16,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Calendar;
 
 public class Events extends AppCompatActivity implements TextWatcher {
@@ -28,6 +31,9 @@ public class Events extends AppCompatActivity implements TextWatcher {
     TextView setDateTextView;
     int year, month, day;
 
+
+    private DatabaseReference mFirebaseDatabaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +43,9 @@ public class Events extends AppCompatActivity implements TextWatcher {
         getSupportActionBar().setTitle("Create New Events");
 
         setContentView(R.layout.activity_events);
+
+        mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
+
 
 
         editText = (EditText) findViewById(R.id.EventNameEditView);
@@ -88,9 +97,15 @@ public class Events extends AppCompatActivity implements TextWatcher {
         time = hour + ":" + min+" "+sunTime;
         Log.i("Time", time);
 
+        Event e = new Event(setDateTextView.getText().toString(), time, editText.getText().toString());
+
         String s = setDateTextView.getText() + " " + time + "\n";
         s += editText.getText();
         editText.setText(s);
+
+
+
+        mFirebaseDatabaseReference.child("events").child(MainActivity.userGroup).push().setValue(e);
 
         finish();
     }
@@ -134,18 +149,6 @@ public class Events extends AppCompatActivity implements TextWatcher {
     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
         BasicEventsActivity.events.set(noteId, String.valueOf(charSequence));
         BasicEventsActivity.arrayAdapter.notifyDataSetChanged();
-
-//        if(BasicEventsActivity.set == null){
-//            BasicEventsActivity.set = new HashSet<String>();
-//        } else {
-//            BasicEventsActivity.set.clear();
-//        }
-//
-//        SharedPreferences sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
-//
-//        BasicEventsActivity.set.addAll(BasicEventsActivity.events);
-//        sharedPreferences.edit().remove("events").apply();
-//        sharedPreferences.edit().putStringSet("events", BasicEventsActivity.set).apply();
 
     }
 

@@ -11,7 +11,6 @@ public class Class {
     int startTime;
     int endTime;
 
-    String nem;
 
     Class(String n, String c, String t1, String t2){
         name= n;

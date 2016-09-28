@@ -95,8 +95,12 @@ public class MainActivity extends AppCompatActivity
         routine.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view){
-                    Intent i = new Intent(MainActivity.this, Routine.class);
-                    startActivity(i);
+                    try{
+                        Intent i = new Intent(MainActivity.this, Routine.class);
+                        startActivity(i);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         );
@@ -106,8 +110,12 @@ public class MainActivity extends AppCompatActivity
         presentance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Intent i = new Intent(MainActivity.this, Presence.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, Presence.class);
+                    startActivity(i);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }
         );
@@ -117,8 +125,12 @@ public class MainActivity extends AppCompatActivity
         upComingEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, BasicEventsActivity.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, BasicEventsActivity.class);
+                    startActivity(i);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -127,8 +139,12 @@ public class MainActivity extends AppCompatActivity
         groupChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, GroupChat.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, GroupChat.class);
+                    startActivity(i);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -137,8 +153,12 @@ public class MainActivity extends AppCompatActivity
         file.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, File.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, File.class);
+                    startActivity(i);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -146,8 +166,12 @@ public class MainActivity extends AppCompatActivity
         developer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Developer.class);
-                startActivity(i);
+                try{
+                    Intent i = new Intent(MainActivity.this, Developer.class);
+                    startActivity(i);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
 

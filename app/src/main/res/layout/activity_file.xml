@@ -19,7 +19,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="On GoogleDrive"
         android:id="@+id/googleDriveOpener"
-        android:background="@drawable/round_gree"
+        android:background="@drawable/round_green"
         android:width="200dp"
         android:padding="5dp"
         android:textAlignment="center"

@@ -97,8 +97,6 @@ public class MainActivity extends AppCompatActivity
                 public void onClick(View view){
                     Intent i = new Intent(MainActivity.this, Routine.class);
                     startActivity(i);
-                    finish();
-                    return;
                 }
             }
         );

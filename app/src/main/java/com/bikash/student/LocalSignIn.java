@@ -82,7 +82,7 @@ public class LocalSignIn extends AppCompatActivity {
                 Log.i("Name", userInfo);
 
 
-                MainActivity.userGroup = userInfo;
+                HomeActivity.userGroup = userInfo;
                 sharedPreferences.edit().putString("userGroup", userInfo).apply();
                 Toast.makeText(getBaseContext(), "Your are logged into group\n          " + userInfo, Toast.LENGTH_LONG).show();
 

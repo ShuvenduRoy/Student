@@ -125,7 +125,7 @@ public class GroupChat extends AppCompatActivity
                 FriendlyMessage.class,
                 R.layout.item_message,
                 MessageViewHolder.class,
-                mFirebaseDatabaseReference.child(MESSAGES_CHILD).child(MainActivity.userGroup)) {
+                mFirebaseDatabaseReference.child(MESSAGES_CHILD).child(HomeActivity.userGroup)) {
 
             @Override
             protected void populateViewHolder(MessageViewHolder viewHolder,
@@ -238,7 +238,7 @@ public class GroupChat extends AppCompatActivity
                         FriendlyMessage(mMessageEditText.getText().toString(),
                         mUsername,
                         mPhotoUrl);
-                mFirebaseDatabaseReference.child(MESSAGES_CHILD).child(MainActivity.userGroup)
+                mFirebaseDatabaseReference.child(MESSAGES_CHILD).child(HomeActivity.userGroup)
                         .push().setValue(friendlyMessage);
                 mMessageEditText.setText("");
             }

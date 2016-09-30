@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bikash.student" >
+    package="com.bikash.student">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".Student"
         android:allowBackup="true"
         android:icon="@mipmap/graduate_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".Student"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Routine" >
+        <activity android:name=".Routine">
             //making the routing landscape mode
         </activity>
         <activity android:name=".Presence" />
@@ -45,6 +45,7 @@
         <activity android:name=".EditPresence" />
         <activity android:name=".LocalSignIn" />
         <activity android:name=".GroupChat" />
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

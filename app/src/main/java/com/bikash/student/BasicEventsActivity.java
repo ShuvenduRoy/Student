@@ -64,7 +64,7 @@ public class BasicEventsActivity extends AppCompatActivity {
 
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
-        mFirebaseDatabaseReference.child("events").child(MainActivity.userGroup).addChildEventListener(new ChildEventListener() {
+        mFirebaseDatabaseReference.child("events").child(HomeActivity.userGroup).addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Event e = dataSnapshot.getValue(Event.class);

@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -40,6 +41,8 @@ public class BasicEventsActivity extends AppCompatActivity {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        Firebase.setAndroidContext(this);
+
         setContentView(R.layout.activity_basic_events);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -63,6 +66,7 @@ public class BasicEventsActivity extends AppCompatActivity {
          */
 
         mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        mFirebaseDatabaseReference.keepSynced(true);
 
         mFirebaseDatabaseReference.child("events").child(HomeActivity.userGroup).addChildEventListener(new ChildEventListener() {
             @Override

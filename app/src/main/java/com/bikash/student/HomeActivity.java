@@ -216,7 +216,7 @@ public class HomeActivity extends AppCompatActivity
                 Auth.GoogleSignInApi.signOut(mGoogleApiClient);
                 mUsername = "ANONYMOUS";
                 startActivity(new Intent(this, MainActivity.class));
-
+                finish();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

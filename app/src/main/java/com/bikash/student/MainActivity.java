@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         };
+        Log.i("Oncreate" , "Called");
 
         googleBtn = (SignInButton) findViewById(R.id.googleBtn);
         googleBtn.setOnClickListener(new View.OnClickListener() {
@@ -132,12 +133,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        //finish();
+
+        Log.i("Restart" , "Called");
+
+        if(mAuth.getCurrentUser()!=null){
+            finish();
+        }
+
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        //finish();
+
+        Log.i("Resume" , "Called");
+
+        if(mAuth.getCurrentUser()!=null){
+            finish();
+        }
+
+
     }
 }

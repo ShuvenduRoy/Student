@@ -10,10 +10,10 @@
     tools:context="com.bikash.student.MainActivity">
 
     <com.google.android.gms.common.SignInButton
-        android:layout_width="match_parent"
+        android:id="@+id/googleBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foregroundGravity="center"
-        android:id="@+id/googleBtn">
-
-    </com.google.android.gms.common.SignInButton>
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        android:layout_gravity="center"/>
 </RelativeLayout>

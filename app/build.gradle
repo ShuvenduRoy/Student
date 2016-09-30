@@ -34,12 +34,13 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile 'com.android.support:design:24.2.1'
 
+    compile 'com.google.firebase:firebase-auth:9.6.1'
     compile 'com.google.android.gms:play-services-auth:9.6.1'
+
     compile 'com.google.firebase:firebase-database:9.6.1'
     compile 'com.google.firebase:firebase-messaging:9.6.1'
     compile 'com.google.firebase:firebase-messaging:9.6.1'
     compile 'com.google.firebase:firebase-core:9.6.1'
-    compile 'com.google.firebase:firebase-auth:9.6.1'
     compile 'com.google.firebase:firebase-config:9.6.1'
     compile 'com.google.android.gms:play-services-appinvite:9.6.1'
     compile 'com.google.android.gms:play-services-ads:9.6.1'

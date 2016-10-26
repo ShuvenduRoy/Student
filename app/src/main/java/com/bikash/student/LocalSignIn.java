@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class LocalSignIn extends AppCompatActivity {
         deparemtntSelector = (EditText) findViewById(R.id.DeparementSelectorEditText);
         batchSelector = (EditText) findViewById(R.id.BatchSelectorEditText);
         nametext = (EditText) findViewById(R.id.NameSelectorEditText);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
 

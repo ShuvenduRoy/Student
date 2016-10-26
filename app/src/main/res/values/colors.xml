@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#009999</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryDark">#117cc9</color>
+    <color name="lightSky">#0e96f9</color>
+    <color name="colorAccent">#FFcb2b</color>
     <color name="Black">#000000</color>
     <color name="primary_color">#4A312A</color>
     <color name="primary_dark_color">#2F1D1A</color><!-- Background color for app -->

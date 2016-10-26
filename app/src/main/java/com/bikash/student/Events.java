@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -33,7 +34,7 @@ public class Events extends AppCompatActivity implements TextWatcher {
     int year, month, day;
 
 
-    private DatabaseReference mFirebaseDatabaseReference;
+    private Firebase mFirebaseDatabaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,7 @@ public class Events extends AppCompatActivity implements TextWatcher {
 
         setContentView(R.layout.activity_events);
 
-        mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
+        mFirebaseDatabaseReference = new Firebase("https://student-eaf3d.firebaseio.com/");
 
 
 

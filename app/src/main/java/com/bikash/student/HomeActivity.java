@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity
     // Firebase instance variables
     private FirebaseAuth mFirebaseAuth;
     private FirebaseUser mFirebaseUser;
-    private String mUsername = "ANONYMOUS";
+    static String  mUsername = "ANONYMOUS";
     private String mPhotoUrl;
     private GoogleApiClient mGoogleApiClient;
     public static String userGroup = "";
@@ -49,6 +49,7 @@ public class HomeActivity extends AppCompatActivity
         try{
 
             userGroup = sharedPreferences.getString("userGroup", "");
+            mUsername = sharedPreferences.getString("userName", "");
 
         } catch (Exception e){
             e.printStackTrace();

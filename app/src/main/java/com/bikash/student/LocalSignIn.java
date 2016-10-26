@@ -17,6 +17,7 @@ public class LocalSignIn extends AppCompatActivity {
     private EditText instituteSelector;
     private EditText deparemtntSelector;
     private EditText batchSelector;
+    private EditText nametext;
 
     private String institute;
     private String department;
@@ -34,6 +35,7 @@ public class LocalSignIn extends AppCompatActivity {
         instituteSelector = (EditText) findViewById(R.id.InstituteSelectorEditText);
         deparemtntSelector = (EditText) findViewById(R.id.DeparementSelectorEditText);
         batchSelector = (EditText) findViewById(R.id.BatchSelectorEditText);
+        nametext = (EditText) findViewById(R.id.NameSelectorEditText);
 
         sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
 
@@ -52,7 +54,17 @@ public class LocalSignIn extends AppCompatActivity {
                  * Getting the user input
                  * It is inside try catch
                  * because user may keep any field blank
+                 *
                  */
+
+                try{
+
+                    HomeActivity.mUsername = instituteSelector.getText().toString();
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+
                 try{
 
                     institute = instituteSelector.getText().toString();
@@ -84,6 +96,7 @@ public class LocalSignIn extends AppCompatActivity {
 
                 HomeActivity.userGroup = userInfo;
                 sharedPreferences.edit().putString("userGroup", userInfo).apply();
+                sharedPreferences.edit().putString("userName", HomeActivity.mUsername).apply();
                 Toast.makeText(getBaseContext(), "Your are logged into group\n          " + userInfo, Toast.LENGTH_LONG).show();
 
                 finish();

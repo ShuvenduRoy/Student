@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "93583264817-j91h01qesplcbq7tpipt1jf3t4j0ut9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bikash.student",
+            "certificate_hash": "467D3E8332478886B880BB5ED7EAD6D53589D096"
+          }
+        },
+        {
           "client_id": "93583264817-ejh989d6nvr07ro3tdjc9co8hbl6h4l3.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

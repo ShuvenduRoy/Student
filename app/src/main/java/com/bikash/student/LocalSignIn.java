@@ -37,7 +37,7 @@ public class LocalSignIn extends AppCompatActivity {
         deparemtntSelector = (EditText) findViewById(R.id.DeparementSelectorEditText);
         batchSelector = (EditText) findViewById(R.id.BatchSelectorEditText);
         nametext = (EditText) findViewById(R.id.NameSelectorEditText);
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
 
         sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
 

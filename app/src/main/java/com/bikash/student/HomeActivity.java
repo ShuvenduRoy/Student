@@ -85,7 +85,7 @@ public class HomeActivity extends AppCompatActivity
 
         } else {
 
-            Toast.makeText(getBaseContext(), "Your are logged into group" + userGroup, Toast.LENGTH_LONG).show();
+            Toast.makeText(getBaseContext(), "Your are logged into group " + userGroup, Toast.LENGTH_LONG).show();
 
         }
 

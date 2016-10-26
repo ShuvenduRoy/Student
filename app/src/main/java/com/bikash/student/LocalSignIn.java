@@ -97,7 +97,7 @@ public class LocalSignIn extends AppCompatActivity {
                 HomeActivity.userGroup = userInfo;
                 sharedPreferences.edit().putString("userGroup", userInfo).apply();
                 sharedPreferences.edit().putString("userName", HomeActivity.mUsername).apply();
-                Toast.makeText(getBaseContext(), "Your are logged into group\n          " + userInfo, Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "Your are logged into group " + userInfo, Toast.LENGTH_LONG).show();
 
                 finish();
 

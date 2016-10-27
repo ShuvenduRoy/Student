@@ -3,6 +3,7 @@ package com.bikash.student;
 import android.app.Application;
 
 import com.firebase.client.Firebase;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.FirebaseDatabase;
 
 

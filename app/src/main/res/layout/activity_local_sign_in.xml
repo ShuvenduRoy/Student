@@ -165,7 +165,7 @@
         <TextView
 
             android:layout_width="match_parent"
-            android:text="Version 2.0"
+            android:text="@string/version"
             android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_height="wrap_content" />

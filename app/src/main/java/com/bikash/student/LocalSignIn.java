@@ -72,7 +72,7 @@ public class LocalSignIn extends AppCompatActivity {
 
                 try{
 
-                    institute = instituteSelector.getText().toString();
+                    institute = instituteSelector.getText().toString().toLowerCase();
 
                 }catch (Exception e){
                     e.printStackTrace();
@@ -80,7 +80,7 @@ public class LocalSignIn extends AppCompatActivity {
 
                 try{
 
-                    department = deparemtntSelector.getText().toString();
+                    department = deparemtntSelector.getText().toString().toLowerCase();
 
                 }catch (Exception e){
                     e.printStackTrace();
@@ -88,7 +88,7 @@ public class LocalSignIn extends AppCompatActivity {
 
                 try{
 
-                    batch = batchSelector.getText().toString();
+                    batch = batchSelector.getText().toString().toLowerCase();
 
                 }catch (Exception e){
                     e.printStackTrace();

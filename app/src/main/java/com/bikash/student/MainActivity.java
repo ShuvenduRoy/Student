@@ -78,17 +78,22 @@ public class MainActivity extends AppCompatActivity {
         String email = mEmail.getText().toString();
         String password = mPassword.getText().toString();
 
-        mAuth.createUserWithEmailAndPassword(email,password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            startActivity(new Intent(MainActivity.this, LocalSignIn.class));
-                        } else {
-                            Toast.makeText(MainActivity.this, "Sign in problem", Toast.LENGTH_LONG).show();
+        if(password.length()<6){
+            Toast.makeText(MainActivity.this, "Password have to be 6 character atleast", Toast.LENGTH_LONG).show();
+            startSignup();
+        } else {
+            mAuth.createUserWithEmailAndPassword(email,password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()){
+                                startActivity(new Intent(MainActivity.this, LocalSignIn.class));
+                            } else {
+                                Toast.makeText(MainActivity.this, "Sign in problem", Toast.LENGTH_LONG).show();
+                            }
                         }
-                    }
-                });
+                    });
+        }
     }
 
     private void startSignin(){

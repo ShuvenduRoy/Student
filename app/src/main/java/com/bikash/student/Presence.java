@@ -25,6 +25,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -40,6 +41,7 @@ public class Presence extends AppCompatActivity {
     static public TextView[] sub_name = new TextView[5];
     static public TextView[] sub_percentage = new TextView[5];
     static public TextView[] sub_count = new TextView[5];
+    static public ArrayList<String> subName;
 
     EditText EditClassName;
     TextView currentClassView;
@@ -206,17 +208,43 @@ public class Presence extends AppCompatActivity {
 
         editLayout = (LinearLayout) findViewById(R.id.editClassLayout);
         getSupportActionBar().setTitle("Presence");
+        subName = new ArrayList<>();
 
-        //Making a teacher Object
-        s[0] = new Subject("Advance Algorithm",0,0);
-        s[1] = new Subject("Microcontroller",0,0);
-        s[2] = new Subject("Numerical Method",0,0);
-        s[3] = new Subject("Math",0,0);
-        s[4] = new Subject("Hum",0,0);
+        try{
+
+            FileInputStream fileInputStream = openFileInput("sub.txt");
+            Scanner scanner = new Scanner(fileInputStream);
+
+            for(int i=0; i<5; i++){
+                String name = scanner.nextLine();
+                subName.add(name);
+                Log.i("name", name);
+            }
+
+        } catch (Exception e){
+            Log.i("name", "file not found");
+            e.printStackTrace();
+        }
+
+
+        s[0] = new Subject("Click Here",0,0);
+        s[1] = new Subject("Click Here",0,0);
+        s[2] = new Subject("Click Here",0,0);
+        s[3] = new Subject("Click Here",0,0);
+        s[4] = new Subject("Click Here",0,0);
+
+        if(subName.size()>0){
+
+            for(int i=0; i<subName.size(); i++){
+                s[i].name = subName.get(i);
+            }
+
+        }
 
         try {
             FileInputStream fis = openFileInput("data.txt");
             InputStreamReader isr = new InputStreamReader(fis);
+
 
             char[] data = new char[50];
             String final_data = " ";
@@ -379,9 +407,11 @@ public class Presence extends AppCompatActivity {
                 for(int i=0; i<n; i++){
                     String s = sub_name[i].getText().toString() + "\n";
                     w.write(s);
+                    Log.i("Writing", s);
                 }
                 w.flush();
                 w.close();
+                f.close();
 
             } catch (IOException e) {
                 e.printStackTrace();

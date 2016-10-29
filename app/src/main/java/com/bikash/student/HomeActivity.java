@@ -35,6 +35,8 @@ public class HomeActivity extends AppCompatActivity
     private GoogleApiClient mGoogleApiClient;
     public static String userGroup = "";
     SharedPreferences sharedPreferences;
+    public static String userEmail="";
+    public static String userPassword="";
 
 
     @Override

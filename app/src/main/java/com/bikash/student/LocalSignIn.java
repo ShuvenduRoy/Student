@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.firebase.client.Firebase;
+
 
 public class LocalSignIn extends AppCompatActivity {
 
@@ -25,7 +27,10 @@ public class LocalSignIn extends AppCompatActivity {
     private String department;
     private String batch;
     private String userInfo;
+    private String name;
     SharedPreferences sharedPreferences;
+
+    Firebase firebase;
 
 
     @Override
@@ -35,6 +40,8 @@ public class LocalSignIn extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_local_sign_in);
 
+        firebase = new Firebase("https://student-eaf3d.firebaseio.com/");
+
         //Getting the edit views by their ids
         instituteSelector = (EditText) findViewById(R.id.InstituteSelectorEditText);
         deparemtntSelector = (EditText) findViewById(R.id.DeparementSelectorEditText);
@@ -43,8 +50,6 @@ public class LocalSignIn extends AppCompatActivity {
 
 
         sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
-
-
 
 
 
@@ -64,7 +69,7 @@ public class LocalSignIn extends AppCompatActivity {
 
                 try{
 
-                    HomeActivity.mUsername = instituteSelector.getText().toString();
+                    name = nametext.getText().toString();
 
                 }catch (Exception e){
                     e.printStackTrace();
@@ -96,13 +101,23 @@ public class LocalSignIn extends AppCompatActivity {
 
                 userInfo = institute+department+batch;
 
-                Log.i("Name", userInfo);
+                Log.i("NAME", userInfo);
+                Log.i("NAME", name);
 
 
                 HomeActivity.userGroup = userInfo;
+                HomeActivity.mUsername = name;
                 sharedPreferences.edit().putString("userGroup", userInfo).apply();
                 sharedPreferences.edit().putString("userName", HomeActivity.mUsername).apply();
                 Toast.makeText(getBaseContext(), "Your are logged into group " + userInfo, Toast.LENGTH_LONG).show();
+
+                User u = new User(HomeActivity.mUsername, HomeActivity.userEmail, HomeActivity.userPassword);
+                Log.i("NAME", HomeActivity.mUsername);
+                Log.i("NAME", HomeActivity.userEmail);
+                Log.i("NAME", HomeActivity.userPassword);
+
+                firebase.child("users").child(userInfo).child(HomeActivity.mUsername).setValue(u);
+
 
                 finish();
 

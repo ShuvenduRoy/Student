@@ -3,6 +3,7 @@ package com.bikash.student;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -11,6 +12,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,6 +34,8 @@ public class Routine extends AppCompatActivity {
     LinearLayout editLayout;
     String[][] period = new String[6][8];
     TextView[][] periodView = new TextView[6][8];
+
+    Firebase firebase;
 
 
 
@@ -49,6 +57,7 @@ public class Routine extends AppCompatActivity {
         String finalName = " ";
         EditClassName = (EditText) findViewById(R.id.changeClassName);
 
+
         if(EditClassName.getText() !=null){
             className = EditClassName.getText().toString() + " ";
 
@@ -59,10 +68,15 @@ public class Routine extends AppCompatActivity {
         }
 
 
-
-        currentClassView.setText(finalName);
+        int viewId = currentClassView.getId();
+        TextView t = (TextView) findViewById(viewId);
+        Log.i("IDNAME",Integer.toString(viewId));
+        t.setText(finalName);
         editLayout.setVisibility(View.INVISIBLE);
         EditClassName.setText("");
+
+        Period period = new Period(String.valueOf(viewId), finalName);
+        firebase.child("routine").child(HomeActivity.userGroup).child(String.valueOf(viewId)).setValue(period);
     }
 
 
@@ -73,6 +87,11 @@ public class Routine extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_routine);
         getSupportActionBar().setTitle("Class Routine");
+
+        /**
+         * Connecting to database
+         */
+        firebase = new Firebase("https://student-eaf3d.firebaseio.com/");
 
         editLayout = (LinearLayout) findViewById(R.id.editClassLayout);
 
@@ -121,6 +140,42 @@ public class Routine extends AppCompatActivity {
                 periodView[i][j].setTextSize(13);
             }
         }
+
+        Firebase childRef = firebase.child("routine").child(HomeActivity.userGroup);
+        childRef.addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                Period period = dataSnapshot.getValue(Period.class);
+                Log.i("data1",period.getPeriod());
+                Log.i("data2",period.getSubject());
+
+                int id = Integer.valueOf(period.getPeriod());
+                String sub = period.getSubject();
+
+                TextView t = (TextView) findViewById(id);
+                t.setText(sub);
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
 
         try {
             FileInputStream fis = openFileInput("periods.txt");

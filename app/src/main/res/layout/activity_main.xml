@@ -63,40 +63,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="116dp" />
 
-    <Button
-        android:textColor="@color/colorPrimaryDark"
-        android:background="@drawable/button_background"
-        android:text="Sign Up"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/signupButton"
-        android:layout_marginRight="64dp"
-        android:layout_marginEnd="64dp"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_alignBaseline="@+id/loginButton"
-        android:layout_alignBottom="@+id/loginButton"
-        android:layout_alignRight="@+id/password"
-        android:layout_alignEnd="@+id/password" />
 
-    <Button
-        android:textColor="@color/colorPrimaryDark"
-        android:text="Sign In"
-        android:background="@drawable/button_background"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:id="@+id/loginButton"
-        android:elevation="0dp"
-        style="@android:style/Widget.Button.Inset"
-        android:layout_marginRight="34dp"
-        android:layout_marginEnd="34dp"
-        android:layout_below="@+id/password"
-        android:layout_toLeftOf="@+id/signupButton"
-        android:layout_toStartOf="@+id/signupButton" />
-
-
-
-        <TextView
+    <TextView
             android:id="@+id/version"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
@@ -111,6 +79,42 @@
             android:textColor="@color/White"
             android:textAlignment="center"
             android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Sign In"
+        android:background="@drawable/button_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/loginButton"
+        android:elevation="0dp"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@drawable/button_background"
+        android:text="Sign Up"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signupButton"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_below="@+id/loginButton"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_alignStart="@+id/loginButton"
+        android:layout_marginBottom="20dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/password"
+        android:layout_alignLeft="@+id/loginButton"
+        android:layout_alignStart="@+id/loginButton"
+        android:id="@+id/progressBar2" />
 
 
 </RelativeLayout>

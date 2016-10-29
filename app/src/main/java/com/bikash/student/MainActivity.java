@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
 
+    ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         mPassword = (EditText) findViewById(R.id.password);
         button = (Button) findViewById(R.id.loginButton);
         signupButton = (Button) findViewById(R.id.signupButton);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar.setVisibility(View.GONE);
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -75,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startSignup(){
+        progressBar.setVisibility(View.VISIBLE);
+
         String email = mEmail.getText().toString();
         String password = mPassword.getText().toString();
 
@@ -90,10 +97,10 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-
+                                progressBar.setVisibility(View.GONE);
                                 startActivity(new Intent(MainActivity.this, LocalSignIn.class));
                             } else {
-                                Toast.makeText(MainActivity.this, "Sign in problem", Toast.LENGTH_LONG).show();
+                                Toast.makeText(MainActivity.this, "Email Already used", Toast.LENGTH_LONG).show();
                             }
                         }
                     });
@@ -101,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startSignin(){
+        progressBar.setVisibility(View.VISIBLE);
+
         String email = mEmail.getText().toString();
         String password = mPassword.getText().toString();
 
@@ -110,10 +119,11 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
-
-                            startActivity(new Intent(MainActivity.this, LocalSignIn.class));
+                            progressBar.setVisibility(View.GONE);
+                            startActivity(new Intent(MainActivity.this, HomeActivity.class));
                         } else {
-                            Toast.makeText(MainActivity.this, "Sign in problem", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "Email or password did not match any account", Toast.LENGTH_LONG).show();
+
                         }
 
                     }

@@ -78,11 +78,16 @@ public class BasicEventsActivity extends AppCompatActivity {
             public void onChildAdded(com.firebase.client.DataSnapshot dataSnapshot, String s) {
                 Event e = dataSnapshot.getValue(Event.class);
 
-                String eventadded = new String(e.getDate() + " " + e.getTime() + "\n" + e.getEvent());
+                String eventadded = new String(e.getDate());
+                if(e.getTime().length()>1){
+                    eventadded+= " " + e.getTime()+"\n" + e.getEvent();
+                }
 
                 events.add(eventadded);
                 Collections.sort(events);
                 arrayAdapter.notifyDataSetChanged();
+
+
             }
 
             @Override
@@ -135,6 +140,25 @@ public class BasicEventsActivity extends AppCompatActivity {
                                 events.remove(position);
 
                                 arrayAdapter.notifyDataSetChanged();
+
+                                firebaseDatabase = new Firebase("https://student-eaf3d.firebaseio.com/events/");
+                                firebaseDatabase.child(HomeActivity.userGroup).removeValue(new Firebase.CompletionListener() {
+                                    @Override
+                                    public void onComplete(FirebaseError firebaseError, Firebase firebase) {
+
+                                        for(int i=0; i<events.size(); i++){
+                                            String event = "";
+                                            String date = events.get(i);
+                                            String time = "";
+
+                                            Event e = new Event(date,time,event);
+
+                                            firebaseDatabase.child(HomeActivity.userGroup).push().setValue(e);
+
+
+                                        }
+                                    }
+                                });
 
                             }
                         })

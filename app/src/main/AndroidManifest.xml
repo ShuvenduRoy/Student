@@ -45,7 +45,8 @@
         <activity android:name=".EditPresence" />
         <activity android:name=".LocalSignIn" />
         <activity android:name=".GroupChat" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ChangeLink"></activity>
     </application>
 
 </manifest>

@@ -138,18 +138,18 @@ public class HomeActivity extends AppCompatActivity
         });
 
 
-        final TextView groupChat = (TextView) findViewById(R.id.groupChatTextview);
-        groupChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try{
-                    Intent i = new Intent(HomeActivity.this, GroupChat.class);
-                    startActivity(i);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+//        final TextView groupChat = (TextView) findViewById(R.id.groupChatTextview);
+//        groupChat.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                try{
+//                    Intent i = new Intent(HomeActivity.this, GroupChat.class);
+//                    startActivity(i);
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
 
 
         final TextView file = (TextView) findViewById(R.id.file_layout);

@@ -116,14 +116,7 @@ public class BasicEventsActivity extends AppCompatActivity {
         /**
          * Create an action when any of the item will be clicked
          */
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent i = new Intent(getApplicationContext(), Events.class);
-                i.putExtra("Id", position);
-                startActivity(i);
-            }
-        });
+
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -138,7 +131,6 @@ public class BasicEventsActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
 
                                 events.remove(position);
-
                                 arrayAdapter.notifyDataSetChanged();
 
                                 firebaseDatabase = new Firebase("https://student-eaf3d.firebaseio.com/events/");
@@ -157,6 +149,10 @@ public class BasicEventsActivity extends AppCompatActivity {
 
 
                                         }
+
+                                        finish();
+                                        startActivity(getIntent());
+
                                     }
                                 });
 
@@ -179,8 +175,22 @@ public class BasicEventsActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), Events.class);
                 startActivity(i);
 
+
             }
         });
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
     }
 

@@ -47,7 +47,7 @@ public class Developer extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"shuvendu1roy@gmail.com"});
-                intent.putExtra(Intent.EXTRA_SUBJECT, "About App Student 2.0");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "About App Student");
                 intent.putExtra(Intent.EXTRA_TEXT, "");
 
                 startActivity(Intent.createChooser(intent, "Send Email"));

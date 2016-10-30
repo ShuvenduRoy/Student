@@ -93,6 +93,8 @@ public class HomeActivity extends AppCompatActivity
 //        }
 
 
+        Toast.makeText(getBaseContext(), "Your are logged into group " + HomeActivity.userGroup, Toast.LENGTH_LONG).show();
+
         //Routine activity
         final TextView routine = (TextView)findViewById(R.id.routine);
         routine.setOnClickListener(new View.OnClickListener() {

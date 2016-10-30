@@ -1,6 +1,8 @@
 package com.bikash.student;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    SharedPreferences sharedPreferences;
+
 
 
     String email;
@@ -49,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         firebase = new Firebase("https://student-eaf3d.firebaseio.com/email");
+        sharedPreferences = this.getSharedPreferences("com.bikash.student", Context.MODE_PRIVATE);
 
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
@@ -138,8 +143,9 @@ public class MainActivity extends AppCompatActivity {
                                     HomeActivity.userGroup = ss;
                                     Log.i("DATA",ss);
 
-                                    Toast.makeText(getBaseContext(), "Your are logged into group " + HomeActivity.userGroup, Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getBaseContext(), "Your are logged into group " + ss, Toast.LENGTH_LONG).show();
 
+                                    sharedPreferences.edit().putString("userGroup", ss).apply();
                                 }
 
                                 @Override

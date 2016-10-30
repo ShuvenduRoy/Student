@@ -118,6 +118,9 @@ public class LocalSignIn extends AppCompatActivity {
 
                 firebase.child("users").child(userInfo).child(HomeActivity.mUsername).setValue(u);
 
+                String formatedMail = EmailProcess.ProcessEmail(HomeActivity.userEmail);
+                firebase.child("email").child(formatedMail).setValue(userInfo);
+
 
                 finish();
 

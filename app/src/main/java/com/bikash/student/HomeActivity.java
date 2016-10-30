@@ -81,16 +81,16 @@ public class HomeActivity extends AppCompatActivity
          * Local Authorization Check
          */
 
-        if(userGroup=="")
-        {
-            Intent i = new Intent(HomeActivity.this, LocalSignIn.class);
-            startActivity(i);
-
-        } else {
-
-            Toast.makeText(getBaseContext(), "Your are logged into group " + userGroup, Toast.LENGTH_LONG).show();
-
-        }
+//        if(userGroup=="")
+//        {
+//            Intent i = new Intent(HomeActivity.this, LocalSignIn.class);
+//            startActivity(i);
+//
+//        } else {
+//
+//            Toast.makeText(getBaseContext(), "Your are logged into group " + userGroup, Toast.LENGTH_LONG).show();
+//
+//        }
 
 
         //Routine activity

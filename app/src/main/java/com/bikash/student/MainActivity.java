@@ -14,6 +14,11 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+import com.firebase.client.ValueEventListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -29,8 +34,11 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
 
-    ProgressBar progressBar;
 
+    String email;
+
+    ProgressBar progressBar;
+    Firebase firebase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+
         mAuth = FirebaseAuth.getInstance();
+        firebase = new Firebase("https://student-eaf3d.firebaseio.com/email");
 
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
@@ -82,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     private void startSignup(){
         progressBar.setVisibility(View.VISIBLE);
 
-        String email = mEmail.getText().toString();
+        final String email = mEmail.getText().toString();
         String password = mPassword.getText().toString();
 
         HomeActivity.userEmail = email;
@@ -110,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     private void startSignin(){
         progressBar.setVisibility(View.VISIBLE);
 
-        String email = mEmail.getText().toString();
+        email = mEmail.getText().toString();
         String password = mPassword.getText().toString();
 
         mAuth.signInWithEmailAndPassword(email,password)
@@ -119,6 +129,25 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if(task.isSuccessful()){
+
+                            final String formatedMail = EmailProcess.ProcessEmail(email);
+                            firebase.addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    String ss = dataSnapshot.child(formatedMail).getValue().toString();
+                                    HomeActivity.userGroup = ss;
+                                    Log.i("DATA",ss);
+
+                                    Toast.makeText(getBaseContext(), "Your are logged into group " + HomeActivity.userGroup, Toast.LENGTH_LONG).show();
+
+                                }
+
+                                @Override
+                                public void onCancelled(FirebaseError firebaseError) {
+
+                                }
+                            });
+
                             progressBar.setVisibility(View.GONE);
                             startActivity(new Intent(MainActivity.this, HomeActivity.class));
                         } else {

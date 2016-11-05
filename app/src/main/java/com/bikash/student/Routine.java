@@ -77,6 +77,8 @@ public class Routine extends AppCompatActivity {
 
         Period period = new Period(String.valueOf(viewId), finalName);
         firebase.child("routine").child(HomeActivity.userGroup).child(String.valueOf(viewId)).setValue(period);
+        String log = HomeActivity.mUsername + " has changed routine";
+        firebase.child("log").child(HomeActivity.userGroup).push().setValue(log);
     }
 
 

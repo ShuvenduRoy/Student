@@ -108,7 +108,7 @@ public class LocalSignIn extends AppCompatActivity {
                 HomeActivity.userGroup = userInfo;
                 HomeActivity.mUsername = name;
                 sharedPreferences.edit().putString("userGroup", userInfo).apply();
-                sharedPreferences.edit().putString("userName", HomeActivity.mUsername).apply();
+                sharedPreferences.edit().putString("userName", name).apply();
                 Toast.makeText(getBaseContext(), "Your are logged into group " + userInfo, Toast.LENGTH_LONG).show();
 
                 User u = new User(HomeActivity.mUsername, HomeActivity.userEmail, HomeActivity.userPassword);
@@ -117,6 +117,8 @@ public class LocalSignIn extends AppCompatActivity {
                 Log.i("NAME", HomeActivity.userPassword);
 
                 firebase.child("users").child(userInfo).child(HomeActivity.mUsername).setValue(u);
+                String userlog = HomeActivity.mUsername + " has joined group" + userInfo;
+                firebase.child("log").child(userInfo).push().setValue(userlog);
 
                 String formatedMail = EmailProcess.ProcessEmail(HomeActivity.userEmail);
                 firebase.child("email").child(formatedMail).setValue(userInfo);

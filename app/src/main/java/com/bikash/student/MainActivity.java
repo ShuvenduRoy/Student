@@ -113,8 +113,11 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 progressBar.setVisibility(View.GONE);
+                                sharedPreferences.edit().putString("userEmail", email).apply();
                                 startActivity(new Intent(MainActivity.this, LocalSignIn.class));
+
                             } else {
+                                progressBar.setVisibility(View.GONE);
                                 Toast.makeText(MainActivity.this, "Email Already used", Toast.LENGTH_LONG).show();
                             }
                         }
@@ -135,6 +138,10 @@ public class MainActivity extends AppCompatActivity {
 
                         if(task.isSuccessful()){
 
+                            /**
+                             * Getting user Group
+                             */
+
                             final String formatedMail = EmailProcess.ProcessEmail(email);
                             firebase.addValueEventListener(new ValueEventListener() {
                                 @Override
@@ -143,9 +150,9 @@ public class MainActivity extends AppCompatActivity {
                                     HomeActivity.userGroup = ss;
                                     Log.i("DATA",ss);
 
-                                    Toast.makeText(getBaseContext(), "Your are logged into group " + ss, Toast.LENGTH_LONG).show();
-
+                                    sharedPreferences.edit().putString("userEmail", email).apply();
                                     sharedPreferences.edit().putString("userGroup", ss).apply();
+
                                 }
 
                                 @Override
@@ -158,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(MainActivity.this, HomeActivity.class));
                         } else {
                             Toast.makeText(MainActivity.this, "Email or password did not match any account", Toast.LENGTH_LONG).show();
-
+                            progressBar.setVisibility(View.GONE);
                         }
 
                     }

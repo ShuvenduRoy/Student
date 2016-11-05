@@ -38,16 +38,14 @@
             android:enabled="true"
             android:exported="false" />
 
-        <service
-            android:name=".MyNewIntentService">
+        <service android:name=".MyNewIntentService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service
-            android:name=".MyFirebaseInstanceIdService">
+        <service android:name=".MyFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
@@ -55,7 +53,8 @@
         <activity android:name=".LocalSignIn" />
         <activity android:name=".GroupChat" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ChangeLink"></activity>
+        <activity android:name=".ChangeLink" />
+        <activity android:name=".LogMenu"></activity>
     </application>
 
 </manifest>

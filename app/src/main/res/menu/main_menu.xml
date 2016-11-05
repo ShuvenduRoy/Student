@@ -6,8 +6,8 @@
         android:title="Sign Out"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/fresh_config_menu"
-        android:title="Fresh config"
+        android:id="@+id/log_menu"
+        android:title="Group Log"
         app:showAsAction="never"/>
 
 

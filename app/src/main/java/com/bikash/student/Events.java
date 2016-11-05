@@ -108,6 +108,8 @@ public class Events extends AppCompatActivity implements TextWatcher {
 
 
         mFirebaseDatabaseReference.child("events").child(HomeActivity.userGroup).push().setValue(e);
+        String log = HomeActivity.mUsername + " has added an event " + e.getEvent();
+        mFirebaseDatabaseReference.child("log").child(HomeActivity.userGroup).push().setValue(log);
         Toast.makeText(this,"Uploading...",Toast.LENGTH_LONG).show();
 
         finish();

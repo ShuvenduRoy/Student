@@ -18,6 +18,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.client.ChildEventListener;
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -33,10 +37,10 @@ public class HomeActivity extends AppCompatActivity
     static String  mUsername = "ANONYMOUS";
     private String mPhotoUrl;
     private GoogleApiClient mGoogleApiClient;
-    public static String userGroup = "";
+    public static String userGroup = "ANONYMOUS";
     SharedPreferences sharedPreferences;
-    public static String userEmail="";
-    public static String userPassword="";
+    public static String userEmail="ANONYMOUS";
+    public static String userPassword="ANONYMOUS";
 
 
     @Override
@@ -50,8 +54,53 @@ public class HomeActivity extends AppCompatActivity
 
         try{
 
-            userGroup = sharedPreferences.getString("userGroup", "");
-            mUsername = sharedPreferences.getString("userName", "");
+            userGroup = sharedPreferences.getString("userGroup", "ANONYMOUS");
+            Log.i("USERDATA4",userGroup);
+            userEmail = sharedPreferences.getString("userEmail","ANONYMOUS");
+            Log.i("USERDATA4",userEmail);
+            mUsername = sharedPreferences.getString("userName","ANONYMOUS");
+            Log.i("USERDATA4",mUsername);
+
+
+                Firebase firebaseName = new Firebase("https://student-eaf3d.firebaseio.com/users");
+                firebaseName.child(HomeActivity.userGroup).addChildEventListener(new ChildEventListener() {
+                    @Override
+                    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+                       try{
+                           User u = dataSnapshot.getValue(User.class);
+                           Log.i("USERDATA1",u.getEmail());
+                           Log.i("USERDATA2",u.getUsername());
+                           Log.i("USERDATA3", userEmail);
+                           if(u.getEmail().equals(userEmail)){
+                               mUsername = u.getUsername();
+                               sharedPreferences.edit().putString("userName", mUsername).apply();
+                           }
+                       } catch (Exception e){
+                           e.printStackTrace();
+                       }
+                    }
+
+                    @Override
+                    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+                    }
+
+                    @Override
+                    public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+                    }
+
+                    @Override
+                    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(FirebaseError firebaseError) {
+
+                    }
+                });
+
 
         } catch (Exception e){
             e.printStackTrace();
@@ -77,23 +126,8 @@ public class HomeActivity extends AppCompatActivity
                 .addApi(Auth.GOOGLE_SIGN_IN_API)
                 .build();
 
-        /**
-         * Local Authorization Check
-         */
-
-//        if(userGroup=="")
-//        {
-//            Intent i = new Intent(HomeActivity.this, LocalSignIn.class);
-//            startActivity(i);
-//
-//        } else {
-//
-//            Toast.makeText(getBaseContext(), "Your are logged into group " + userGroup, Toast.LENGTH_LONG).show();
-//
-//        }
 
 
-        Toast.makeText(getBaseContext(), "Your are logged into group " + HomeActivity.userGroup, Toast.LENGTH_LONG).show();
 
         //Routine activity
         final TextView routine = (TextView)findViewById(R.id.routine);
@@ -194,7 +228,6 @@ public class HomeActivity extends AppCompatActivity
     }
 
 
-
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -204,6 +237,12 @@ public class HomeActivity extends AppCompatActivity
             finish();
 
         }
+
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+
+
     }
 
     @Override
@@ -223,6 +262,8 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 return true;
+            case R.id.log_menu:
+                startActivity(new Intent(HomeActivity.this, LogMenu.class));
             default:
                 return super.onOptionsItemSelected(item);
         }

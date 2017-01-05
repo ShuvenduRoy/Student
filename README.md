@@ -2,7 +2,7 @@
 Student interaction with regular class activity
 
 
-This app features some regualar import needs for a student. This functionality is online based. So first you have to sign in.
+This app features some regualar important needs for a student. This functionality is online based. So first you have to sign in.
 <p align="center">
   <img src="https://github.com/Bikash300895/Student/blob/master/ScreenShots/1.png" width="250"/>
 </p>
@@ -11,7 +11,7 @@ This is the main interface of the app
 <p align="center">
   <img src="https://github.com/Bikash300895/Student/blob/master/ScreenShots/2.png" width="250"/>
 </p>
-During sign up you will be assigned to a group according to your information abour your university name, department and batch.
+During sign up you will be assigned to a group according to your information about your university name, department and batch.
 
 The onlined based class routune. Any one can update the routune and all members of his group will be able to so the change
 <p align="center">
